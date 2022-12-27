@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     createBrowserRouter,
+    createHashRouter,
     RouterProvider,
 } from "react-router-dom";
 import Anasayfa from '../pages/Anasayfa';
@@ -9,7 +10,7 @@ import Urunler from '../pages/Urunler';
 import Iletisim from '../pages/Iletisim';
 import NotFound from '../pages/NotFound';
 
-const routes = createBrowserRouter([
+const routes = createHashRouter([
     {
         path: "/",
         element: <Anasayfa />,

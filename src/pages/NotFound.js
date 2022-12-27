@@ -11,7 +11,10 @@ export default function NotFound() {
             title="There is no page!"
             subTitle="Sorry, there are not any pages in this url."
             extra={[
-                <Button type="primary">Back Home</Button>,
+                <Button
+                    type="primary"
+                    onClick={() => window.location.href = "https://aliugurlafci.github.io/reyap/"}
+                >Back Home</Button>,
                 <div>{error.message || error.statusText}</div>
             ]}
         />
