@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reyap/static/css/main.5d7ca2ee.css",
-    "main.js": "/reyap/static/js/main.71d6ae9a.js",
+    "main.css": "/reyap/static/css/main.41d21f4e.css",
+    "main.js": "/reyap/static/js/main.9d604681.js",
     "static/js/787.e6ef034c.chunk.js": "/reyap/static/js/787.e6ef034c.chunk.js",
     "static/media/Poppins-Thin.ttf": "/reyap/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
     "static/media/Poppins-Regular.ttf": "/reyap/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
@@ -9,12 +9,12 @@
     "static/media/Poppins-Bold.ttf": "/reyap/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "static/media/logo.png": "/reyap/static/media/logo.bc258cd089a44f907386.png",
     "index.html": "/reyap/index.html",
-    "main.5d7ca2ee.css.map": "/reyap/static/css/main.5d7ca2ee.css.map",
-    "main.71d6ae9a.js.map": "/reyap/static/js/main.71d6ae9a.js.map",
+    "main.41d21f4e.css.map": "/reyap/static/css/main.41d21f4e.css.map",
+    "main.9d604681.js.map": "/reyap/static/js/main.9d604681.js.map",
     "787.e6ef034c.chunk.js.map": "/reyap/static/js/787.e6ef034c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d7ca2ee.css",
-    "static/js/main.71d6ae9a.js"
+    "static/css/main.41d21f4e.css",
+    "static/js/main.9d604681.js"
   ]
 }
