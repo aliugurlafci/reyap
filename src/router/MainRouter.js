@@ -30,6 +30,10 @@ const routes = createBrowserRouter([
         element: <Iletisim />,
         errorElement: <NotFound />,
     },
+], [
+    {
+        basename: 'https://aliugurlafci.github.io/reyap/'
+    }
 ]);
 
 export default function MainRouter() {
