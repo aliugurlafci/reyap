@@ -7,11 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const { Header } = Layout;
 
 export const NavbarComponent = () => {
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
     const [showDrawer, setShowDrawer] = useState(false);
-    const navigate = params => {
-        window.location.href = params;
-    }
 
     const routes = [
         {

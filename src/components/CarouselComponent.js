@@ -10,6 +10,7 @@ export const CarouselComponent = () => {
             lazyLoad='progressive'
             infinite
             arrows
+            swipe
             prevArrow={<LeftOutlined />}
             nextArrow={<RightOutlined />}
             draggable>

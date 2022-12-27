@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    createBrowserRouter,
     createHashRouter,
     RouterProvider,
 } from "react-router-dom";
@@ -31,11 +30,11 @@ const routes = createHashRouter([
         element: <Iletisim />,
         errorElement: <NotFound />,
     },
-], [
+]/*, [
     {
         basename: 'https://aliugurlafci.github.io/reyap/'
     }
-]);
+]*/);
 
 export default function MainRouter() {
     return (

@@ -1,8 +1,9 @@
 import React from 'react';
-import { useRouteError } from "react-router-dom";
+import { useRouteError, useNavigate } from "react-router-dom";
 import { Button, Result } from 'antd';
 
 export default function NotFound() {
+    const navigate = useNavigate();
     const error = useRouteError();
 
     return (
@@ -13,7 +14,7 @@ export default function NotFound() {
             extra={[
                 <Button
                     type="primary"
-                    onClick={() => window.location.href = "https://aliugurlafci.github.io/reyap/"}
+                    onClick={() => navigate("/")}
                 >Back Home</Button>,
                 <div>{error.message || error.statusText}</div>
             ]}

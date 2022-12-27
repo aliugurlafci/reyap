@@ -63,9 +63,7 @@
     padding: 100px;
     width: 100%;
     display: flex;
-    align-self: center;
     justify-content: center;
-
 }
 
 .work-details .item-container {
@@ -78,7 +76,7 @@
 .work-details .item-container .item-icon {
     font-size: 50px;
     color: #143d2b;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .work-details .item-container .item-content {

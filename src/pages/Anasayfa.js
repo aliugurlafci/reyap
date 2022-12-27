@@ -12,7 +12,7 @@ function Anasayfa() {
   const { Content } = Layout;
   return (
     <Layout>
-      <Layout>
+      <Layout className='navbar-sticky'>
         <NavbarComponent />
       </Layout>
       <Layout className='content-layout'>
