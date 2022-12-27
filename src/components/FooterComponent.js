@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Layout, Col, Row } from 'antd';
 
 export const FooterComponent = () => {
-    const [env, setEnv] = useState(window.location.href.replace("http://localhost:3000", ""));
+    const [env, setEnv] = useState(window.location.href.replace("https://aliugurlafci.github.io/reyap/", ""));
     const { Footer } = Layout;
 
     useEffect(() => {
-        setEnv(window.location.href.replace("http://localhost:3000", ""));
+        setEnv(window.location.href.replace("https://aliugurlafci.github.io/reyap", ""));
     }, [env]);
 
     return (
