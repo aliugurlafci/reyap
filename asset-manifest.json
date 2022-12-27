@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/reyap/static/css/main.5d7ca2ee.css",
+    "main.js": "/reyap/static/js/main.34c2296f.js",
+    "static/js/787.e6ef034c.chunk.js": "/reyap/static/js/787.e6ef034c.chunk.js",
+    "static/media/Poppins-Thin.ttf": "/reyap/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
+    "static/media/Poppins-Regular.ttf": "/reyap/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Medium.ttf": "/reyap/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-Bold.ttf": "/reyap/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/logo.png": "/reyap/static/media/logo.bc258cd089a44f907386.png",
+    "index.html": "/reyap/index.html",
+    "main.5d7ca2ee.css.map": "/reyap/static/css/main.5d7ca2ee.css.map",
+    "main.34c2296f.js.map": "/reyap/static/js/main.34c2296f.js.map",
+    "787.e6ef034c.chunk.js.map": "/reyap/static/js/787.e6ef034c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d7ca2ee.css",
+    "static/js/main.34c2296f.js"
+  ]
+}
