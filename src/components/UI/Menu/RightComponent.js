@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
-import { Layout, Menu, Drawer } from 'antd';
-import logo from '../assets/logo.png';
+import { Menu, Drawer } from 'antd';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { MenuOutlined } from '@ant-design/icons';
-import { useNavigate } from 'react-router-dom';
 
-const { Header } = Layout;
-
-export const NavbarComponent = () => {
+export const RightComponent = ({ scrollY, isHome }) => {
     const navigate = useNavigate();
     const [showDrawer, setShowDrawer] = useState(false);
 
+    const handleMenuColor = () => {
+        if (isHome) {
+            return scrollY > 30 ? '#000' : '#fff';
+        }
+        else {
+            return '#000';
+        }
+    }
     const routes = [
         {
             key: 1,
             label: 'Anasayfa',
-            onClick: () => navigate("/")
+            onClick: () => navigate('/')
         },
         {
             key: 2,
@@ -33,24 +38,30 @@ export const NavbarComponent = () => {
         },
     ]
     return (
-        <Header className='navbar flex-align-center' style={{ backgroundColor: 'white', height: 120 }}>
-            <div className='logo-container flex-align-center'>
-                <img src={logo} className="logo" alt="company-logo" />
-            </div>
+        <div className='menu-right-side'>
             <div className='menu-container'>
                 <Menu
                     rootClassName='menu-root'
                     className='menu'
                     theme="light"
+                    style={{ color: handleMenuColor() }}
                     mode="horizontal"
-                    overflowedIndicator={<MenuOutlined onMouseEnter={() => setShowDrawer(true)} />}
-                    items={routes} />
+                    overflowedIndicatorPopupClassName='no-show'
+                    selectable={false}
+                    overflowedIndicator={
+                        <MenuOutlined
+                            onMouseEnter={() => setShowDrawer(true)}
+                            onTouchStart={() => setShowDrawer(true)}
+                            style={{ fontSize: 24 }}
+                        />}
+                    items={routes}
+                />
             </div>
             <div className='mobileHsidden'>
                 <Drawer
                     title="Menu"
                     placement="right"
-                    closable={false}
+                    closable
                     onClose={() => setShowDrawer(false)}
                     open={showDrawer}>
                     <Menu
@@ -62,6 +73,6 @@ export const NavbarComponent = () => {
                         items={routes} />
                 </Drawer>
             </div>
-        </Header>
+        </div>
     );
 }

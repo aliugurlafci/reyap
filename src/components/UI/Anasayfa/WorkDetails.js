@@ -11,8 +11,8 @@ export const WorkDetails = () => {
 
     return (
         <div className="work-details">
-            <Row>
-                <Col xs={24} sm={12} md={8} lg={6} span={6}>
+            <Row className="work-details-row">
+                <Col>
                     <div className="item-container">
                         <RiseOutlined className="item-icon" />
                         <div className="item-content">
@@ -22,7 +22,7 @@ export const WorkDetails = () => {
                     </div>
                 </Col>
                 <Col>
-                    <div className="item-container" xs={24} sm={12} md={8} lg={6} span={6}>
+                    <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
                         <AuditOutlined className="item-icon" />
                         <div className="item-content">
                             <span className="poppins-regular">DASADASDSADSA</span>
@@ -31,7 +31,7 @@ export const WorkDetails = () => {
                     </div>
                 </Col>
                 <Col>
-                    <div className="item-container" xs={24} sm={12} md={8} lg={6} span={6}>
+                    <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
                         <CommentOutlined className="item-icon" />
                         <div className="item-content">
                             <span className="poppins-regular">DASADASDSADSA</span>
@@ -40,7 +40,7 @@ export const WorkDetails = () => {
                     </div>
                 </Col>
                 <Col>
-                    <div className="item-container" xs={24} sm={12} md={8} lg={6} span={6}>
+                    <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
                         <HourglassOutlined className="item-icon" />
                         <div className="item-content">
                             <span className="poppins-regular">DASADASDSADSA</span>

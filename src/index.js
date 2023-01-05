@@ -3,18 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './css/index.css';
 import '../node_modules/antd/dist/reset.css';
 import MainRouter from './router/MainRouter';
-import reportWebVitals from './test/reportWebVitals';
+import { Layout, FloatButton } from 'antd';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const { BackTop } = FloatButton;
 
-root.render(
-  <React.StrictMode>
-    <MainRouter />
-  </React.StrictMode>
-);
+function Index() {
+  return (
+    <>
+      <MainRouter />
+      <BackTop style={{ width: 50, height: 50 }} />
+    </>
+  );
+}
+root.render(<Index />);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

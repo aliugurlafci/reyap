@@ -2,11 +2,12 @@ import React from 'react';
 import {
     createHashRouter,
     RouterProvider,
+    createBrowserRouter
 } from "react-router-dom";
-import Anasayfa from '../pages/Anasayfa';
-import Hakkımızda from '../pages/Hakkımızda';
-import Urunler from '../pages/Urunler';
-import Iletisim from '../pages/Iletisim';
+import Anasayfa from '../pages/UI/Anasayfa';
+import Hakkımızda from '../pages/UI/Hakkımızda';
+import Urunler from '../pages/UI/Urunler';
+import Iletisim from '../pages/UI/Iletisim';
 import NotFound from '../pages/NotFound';
 
 const routes = createHashRouter([
@@ -30,11 +31,7 @@ const routes = createHashRouter([
         element: <Iletisim />,
         errorElement: <NotFound />,
     },
-]/*, [
-    {
-        basename: 'https://aliugurlafci.github.io/reyap/'
-    }
-]*/);
+]);
 
 export default function MainRouter() {
     return (
