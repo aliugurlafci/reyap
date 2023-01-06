@@ -40,14 +40,33 @@
     width: 100%;
 }
 
+.product-row .product-card {
+    width: 100%;
+    min-width: 100%;
+    min-height: 90%;
+    cursor: pointer;
+    border-radius: 0;
+    position: relative;
+    border-width: 2px !important;
+}
+
+.product-card .item-cover-image {
+    object-fit: contain;
+    width: 90%;
+    height: 80%;
+    margin-top: 10px;
+}
+
 .ant-menu-item-selected {
     background-color: #2f8f65 !important;
+    color: white !important;
     transition: all 0.4s ease !important;
 }
 
-.ant-card .ant-card-actions>li>span>.anticon:hover{
+.ant-card .ant-card-actions>li>span>.anticon:hover {
     color: #2f8f65 !important;
-} 
+}
+
 @media screen and (max-width:800px) {
     .ant-drawer-content-wrapper {
         position: absolute;

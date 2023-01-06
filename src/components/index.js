@@ -9,6 +9,10 @@ import { CompanionsComponent } from './UI/Anasayfa/CompanionsComponent';
 
 import { ProductComponent } from "./UI/Urunler/ProductsComponent";
 import { MapComponent } from "./UI/Iletisim/MapComponent";
+import { HakkimizdaComponent } from './UI/Hakkimizda/HakkimizdaComponent';
+
+//ADMIN UI COMPONENTS
+import { LoginComponent } from './Admin/LoginComponent';
 
 export {
     MenuComponent,
@@ -19,5 +23,7 @@ export {
     BuyerCommentComponent,
     CompanionsComponent,
     ProductComponent,
-    MapComponent
+    HakkimizdaComponent,
+    MapComponent,
+    LoginComponent
 }

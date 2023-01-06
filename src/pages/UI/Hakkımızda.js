@@ -3,7 +3,8 @@ import React from 'react';
 import { Layout } from 'antd';
 import {
     FooterComponent,
-    MenuComponent
+    MenuComponent,
+    HakkimizdaComponent
 } from '../../components/index';
 
 const { Content } = Layout;
@@ -11,17 +12,15 @@ const { Content } = Layout;
 export default function Hakkımızda() {
     return (
         <Layout>
-            <Layout className='navbar-sticky'>
-                <MenuComponent />
-            </Layout>
-            <Layout className='content-layout'>
-                <Content className='content'>
-                    <div>Hakkımızda Screen</div>
-                </Content>
-            </Layout>
-            <Layout>
-                <FooterComponent />
-            </Layout>
+            <MenuComponent />
+            <Content className='content'>
+                <HakkimizdaComponent />
+            </Content>
+
         </Layout>
     );
 }
+
+/**
+ * <FooterComponent />
+ */

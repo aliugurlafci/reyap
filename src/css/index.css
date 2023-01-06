@@ -1,10 +1,8 @@
 body, html {
   margin: 0;
   padding: 0;
-
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #ececec !important;
+  -moz-osx-font-smoothing: grayscale
 }
 
 /* #143d2b */
@@ -46,7 +44,7 @@ body, html {
 
 .content {
   width: 100%;
-  background-color: #ececec !important;
+  background-color: #fff !important;
 }
 
 :where(.css-dev-only-do-not-override-9ntgx0).ant-menu-horizontal {

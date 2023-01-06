@@ -10,6 +10,8 @@ import Urunler from '../pages/UI/Urunler';
 import Iletisim from '../pages/UI/Iletisim';
 import NotFound from '../pages/NotFound';
 
+import Login from '../pages/Admin/Login';
+
 const routes = createHashRouter([
     {
         path: "/",
@@ -29,6 +31,11 @@ const routes = createHashRouter([
     {
         path: "/iletisim",
         element: <Iletisim />,
+        errorElement: <NotFound />,
+    },
+    {
+        path: "/admin",
+        element: <Login />,
         errorElement: <NotFound />,
     },
 ]);
