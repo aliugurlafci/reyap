@@ -4,16 +4,19 @@ import './css/index.css';
 import '../node_modules/antd/dist/reset.css';
 import MainRouter from './router/MainRouter';
 import { Layout, FloatButton } from 'antd';
+import { WhatsAppOutlined } from '@ant-design/icons';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const { BackTop } = FloatButton;
+const openWp = () => {
+  window.open('https://api.whatsapp.com/send/?phone=905324968590&text&type=phone_number&app_absent=0', '_blank', 'noreferrer');
+}
 
 function Index() {
   return (
     <>
       <MainRouter />
-      <BackTop style={{ width: 50, height: 50 }} />
+      <FloatButton icon={<WhatsAppOutlined />} onClick={() => openWp()} tooltip={<div>Bize Ulaşın</div>} style={{ width: 50, height: 50,  }} />
     </>
   );
 }

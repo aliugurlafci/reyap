@@ -6,8 +6,9 @@ import {
   WorkDetails,
   FooterComponent,
   MenuComponent,
-  BuyerCommentComponent,
-  CompanionsComponent
+  CompanionsComponent,
+  InfoBox,
+  WorkBrands
 } from '../../components/index';
 
 const { Content } = Layout;
@@ -18,9 +19,9 @@ function Anasayfa() {
       <MenuComponent isHome={true} />
       <Content className='content'>
         <CarouselComponent />
+        <InfoBox />
         <WorkDetails />
-        <CompanionsComponent />
-        <BuyerCommentComponent />
+        <WorkBrands />
       </Content>
       <FooterComponent />
     </Layout>

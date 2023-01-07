@@ -3,16 +3,13 @@ import { FooterComponent } from "./UI/Footer/FooterComponent";
 import { CarouselComponent } from "./UI/Anasayfa/CarouselComponent";
 import { WorkDetails } from "./UI/Anasayfa/WorkDetails";
 import { CompanyDetails } from "./UI/Anasayfa/CompanyDetails";
-import { BuyerCommentComponent } from "./UI/Anasayfa/BuyerCommentComponent";
+import { WorkBrands } from "./UI/Anasayfa/WorkBrands";
 import { CompanionsComponent } from './UI/Anasayfa/CompanionsComponent';
-
-
 import { ProductComponent } from "./UI/Urunler/ProductsComponent";
 import { MapComponent } from "./UI/Iletisim/MapComponent";
-import { HakkimizdaComponent } from './UI/Hakkimizda/HakkimizdaComponent';
+import { InfoBox } from "./UI/Anasayfa/InfoBox";
+import { AboutComponent } from './UI/Kurumsal/AboutComponent';
 
-//ADMIN UI COMPONENTS
-import { LoginComponent } from './Admin/LoginComponent';
 
 export {
     MenuComponent,
@@ -20,10 +17,10 @@ export {
     CarouselComponent,
     WorkDetails,
     CompanyDetails,
-    BuyerCommentComponent,
+    WorkBrands,
     CompanionsComponent,
     ProductComponent,
-    HakkimizdaComponent,
     MapComponent,
-    LoginComponent
+    InfoBox,
+    AboutComponent
 }

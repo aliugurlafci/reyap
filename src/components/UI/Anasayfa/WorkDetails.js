@@ -16,8 +16,8 @@ export const WorkDetails = () => {
                     <div className="item-container">
                         <RiseOutlined className="item-icon" />
                         <div className="item-content">
-                            <span className="poppins-regular">DASADASDSADSA</span>
-                            <h1 className="poppins-regular">kasjfsnsaj</h1>
+                            <span className="poppins-regular"> + 560</span>
+                            <h1 className="poppins-regular">Memnun Müşteri</h1>
                         </div>
                     </div>
                 </Col>
@@ -25,8 +25,8 @@ export const WorkDetails = () => {
                     <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
                         <AuditOutlined className="item-icon" />
                         <div className="item-content">
-                            <span className="poppins-regular">DASADASDSADSA</span>
-                            <h1 className="poppins-regular">kasjfsnsaj</h1>
+                            <span className="poppins-regular">+ 30</span>
+                            <h1 className="poppins-regular">İştirakçi Firma</h1>
                         </div>
                     </div>
                 </Col>
@@ -34,17 +34,8 @@ export const WorkDetails = () => {
                     <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
                         <CommentOutlined className="item-icon" />
                         <div className="item-content">
-                            <span className="poppins-regular">DASADASDSADSA</span>
-                            <h1 className="poppins-regular">kasjfsnsaj</h1>
-                        </div>
-                    </div>
-                </Col>
-                <Col>
-                    <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
-                        <HourglassOutlined className="item-icon" />
-                        <div className="item-content">
-                            <span className="poppins-regular">DASADASDSADSA</span>
-                            <h1 className="poppins-regular">kasjfsnsaj</h1>
+                            <span className="poppins-regular">+ 5000</span>
+                            <h1 className="poppins-regular">Kullanılmış Plastik</h1>
                         </div>
                     </div>
                 </Col>

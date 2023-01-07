@@ -23,8 +23,8 @@ export const RightComponent = ({ scrollY, isHome }) => {
         },
         {
             key: 2,
-            label: 'Hakkımızda',
-            onClick: () => navigate("/hakkimizda")
+            label: 'Kurumsal',
+            onClick: () => navigate("/kurumsal")
         },
         {
             key: 3,

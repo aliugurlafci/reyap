@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { LeftComponent } from './LeftComponent';
 import { RightComponent } from './RightComponent';
+import { TopInfo } from './TopInfo';
+import '../../../css/TopInfo.css';
 
 export const MenuComponent = ({ isHome }) => {
     const [scrollHeight, setScrollHeight] = useState(0);
@@ -25,9 +27,14 @@ export const MenuComponent = ({ isHome }) => {
         return () => window.removeEventListener('scroll', handleHeight);
     }, [isHome]);
     return (
-        <div className={handleRootClassName()}>
-            <LeftComponent scrollY={scrollHeight} isHome={isHome} />
-            <RightComponent scrollY={scrollHeight} isHome={isHome} />
+        <div className='menu-bar' style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ color:'white',zIndex: 99, display: 'flex', justifyContent: 'end', alignItems: 'start' }}>
+                <TopInfo />
+            </div>
+            <div className={handleRootClassName()}>
+                <LeftComponent scrollY={scrollHeight} isHome={isHome} />
+                <RightComponent scrollY={scrollHeight} isHome={isHome} />
+            </div>
         </div>
     );
 }

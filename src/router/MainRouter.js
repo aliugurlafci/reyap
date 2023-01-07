@@ -5,12 +5,10 @@ import {
     createBrowserRouter
 } from "react-router-dom";
 import Anasayfa from '../pages/UI/Anasayfa';
-import Hakkımızda from '../pages/UI/Hakkımızda';
+import Kurumsal from '../pages/UI/Kurumsal';
 import Urunler from '../pages/UI/Urunler';
 import Iletisim from '../pages/UI/Iletisim';
 import NotFound from '../pages/NotFound';
-
-import Login from '../pages/Admin/Login';
 
 const routes = createHashRouter([
     {
@@ -19,8 +17,8 @@ const routes = createHashRouter([
         errorElement: <NotFound />,
     },
     {
-        path: "/hakkimizda",
-        element: <Hakkımızda />,
+        path: "/kurumsal",
+        element: <Kurumsal />,
         errorElement: <NotFound />,
     },
     {
@@ -31,11 +29,6 @@ const routes = createHashRouter([
     {
         path: "/iletisim",
         element: <Iletisim />,
-        errorElement: <NotFound />,
-    },
-    {
-        path: "/admin",
-        element: <Login />,
         errorElement: <NotFound />,
     },
 ]);

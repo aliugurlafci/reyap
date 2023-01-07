@@ -4,6 +4,17 @@
     height: 100%;
 }
 
+.boxMain {
+    width: 450px;
+    height: 450px;
+    background: #fcfcfc;
+    box-shadow: 0 0 5px rgb(151, 150, 150);
+    padding: 15px;
+    transition: box-shadow .2s ease-in-out;
+    cursor: pointer;
+    font-family: poppins-regular;
+}
+
 .carousel-section .carousel-content .dark-filter {
     position: absolute;
     top: 0;
@@ -62,10 +73,19 @@
 /*   Tanıtım kısmı   */
 
 .work-details {
-    padding: 100px;
+    padding: 0px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ececec;
+}
+
+.info-details {
+    padding: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     background-color: #ececec;
 }
@@ -95,7 +115,7 @@
 }
 
 .item-container span {
-    font-size: 16px;
+    font-size: 40px;
 }
 
 .item-container h1 {
@@ -183,7 +203,6 @@
 .comment-content .image-side img {
     width: 150px;
     height: 150px;
-    border-radius: 100%;
     transition: all 0.4s ease;
 }
 
