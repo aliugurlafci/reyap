@@ -1,0 +1,19 @@
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #143d2b !important;
+  }
+  
+  .footer .standart {
+    display: flex;
+    align-items: flex-start !important;
+  }

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './css/index.css';
+import './index.css';
 import '../node_modules/antd/dist/reset.css';
 import MainRouter from './router/MainRouter';
 import { Layout, FloatButton } from 'antd';
@@ -16,7 +16,7 @@ function Index() {
   return (
     <>
       <MainRouter />
-      <FloatButton icon={<WhatsAppOutlined />} onClick={() => openWp()} tooltip={<div>Bize Ulaşın</div>} style={{ width: 50, height: 50,  }} />
+      <FloatButton icon={<WhatsAppOutlined />} onClick={() => openWp()} tooltip={<div>Sipariş ver</div>} style={{ width: 50, height: 50,  }} />
     </>
   );
 }

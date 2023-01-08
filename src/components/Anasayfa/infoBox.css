@@ -1,0 +1,35 @@
+.info-details {
+    padding: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #ececec;
+    font-family: poppins-regular;
+}
+
+.box-main {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(108, 108, 108);
+}
+
+.slogan-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    background-color: #22745826;
+    border-radius: 10px;
+}
+
+.slogan-box-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

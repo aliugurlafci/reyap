@@ -4,11 +4,12 @@ import {
     RouterProvider,
     createBrowserRouter
 } from "react-router-dom";
-import Anasayfa from '../pages/UI/Anasayfa';
-import Kurumsal from '../pages/UI/Kurumsal';
-import Urunler from '../pages/UI/Urunler';
-import Iletisim from '../pages/UI/Iletisim';
+import Anasayfa from '../pages/Anasayfa';
+import Kurumsal from '../pages/Kurumsal';
+import Urunler from '../pages/Urunler';
+import Iletisim from '../pages/Iletisim';
 import NotFound from '../pages/NotFound';
+
 
 const routes = createHashRouter([
     {
@@ -34,6 +35,7 @@ const routes = createHashRouter([
 ]);
 
 export default function MainRouter() {
+
     return (
         <RouterProvider router={routes} />
     );

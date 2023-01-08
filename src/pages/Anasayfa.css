@@ -1,0 +1,223 @@
+.carousel-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-section .carousel-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-content .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.info span {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.info h1 {
+    color: white;
+    font-size: 15px;
+    margin-top: 12px;
+    text-transform: lowercase;
+}
+
+:where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-next {
+    inset-inline-end: 10% !important;
+}
+
+:where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-prev {
+    inset-inline-start: 10% !important;
+}
+
+:where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-prev,
+:where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-next {
+    color: white !important;
+    font-size: 40px !important;
+    z-index: 5;
+}
+
+/*   Tanıtım kısmı   */
+
+.work-details {
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ececec;
+}
+
+.work-details .work-details-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.work-details .item-container {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.work-details .item-container .item-icon {
+    font-size: 50px;
+    color: #143d2b;
+    margin-right: 10px;
+}
+
+.work-details .item-container .item-content {
+    text-align: left;
+}
+
+.item-container span {
+    font-size: 40px;
+}
+
+.item-container h1 {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+/* Company Details  */
+.company-details {
+    width: 100%;
+    height: auto;
+    background-color: #143d2b;
+    margin-bottom: 10%;
+}
+
+.company-details .company-details-row {
+    width: 100% !important;
+
+}
+
+.company-details-row .details {
+    width: 100%;
+    min-height: 300px;
+    padding-inline: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.company-details-row .details span {
+    font-size: 16px;
+    color: white;
+    text-align: left;
+}
+
+.company-details-row .details h1 {
+    font-size: 16px;
+    opacity: 0.9;
+    text-align: left;
+    margin-top: 12px;
+    color: white;
+}
+
+.company-details-row .video-container {
+    height: 100%;
+}
+
+/* Comments */
+
+.buyer-comments-section {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.buyer-comments-section .comment-carousel {
+    max-width: 100% !important;
+    margin: 0 auto;
+}
+
+.buyer-comments-section .comment-content {
+    width: 95% !important;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 3px;
+}
+
+.comment-content .image-side {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.comment-content .image-side img {
+    width: 150px;
+    height: 150px;
+    transition: all 0.4s ease;
+}
+
+.image-side img:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.comment-content .comment-side span {
+    font-family: poppins-regular;
+    font-size: 16px;
+    text-align: center;
+}
+
+.comment-content .footer-side {
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/*   Companions Component   */
+.ant-card-body {
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.companions-section {
+    padding-bottom: 140px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.companion-card {
+    margin: 0 auto;
+}
+
+.companions-section .companion-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}

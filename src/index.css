@@ -1,0 +1,244 @@
+body, html {
+  margin: 0;
+  padding: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ececec !important;
+}
+
+/* #143d2b */
+@font-face {
+  font-family: poppins-thin;
+  src: url('./assets/Poppins-Thin.ttf');
+}
+
+@font-face {
+  font-family: poppins-regular;
+  src: url('./assets/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: poppins-medium;
+  src: url('./assets/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: poppins-bold;
+  src: url('./assets/Poppins-Bold.ttf');
+}
+
+.poppins-thin {
+  font-family: poppins-thin;
+}
+
+.poppins-regular {
+  font-family: poppins-regular;
+}
+
+.poppins-medium {
+  font-family: poppins-medium;
+}
+
+.poppins-bold {
+  font-family: poppins-bold;
+}
+
+.content {
+  width: 100%;
+  background-color: #ececec !important;
+}
+
+:where(.css-dev-only-do-not-override-9ntgx0).ant-menu-horizontal {
+  border-bottom: none !important;
+}
+
+:where(.css-dev-only-do-not-override-9ntgx0).ant-menu-vertical {
+  border-right: none !important;
+}
+
+:where(.css-dev-only-do-not-override-9ntgx0).ant-menu-light.ant-menu-horizontal>.ant-menu-item::after,
+:where(.css-dev-only-do-not-override-9ntgx0).ant-menu-light.ant-menu-horizontal>.ant-menu-submenu::after {
+  position: absolute;
+  inset-inline: 16px;
+  bottom: -15px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  content: "";
+}
+
+/*  #143d2b  */
+.ant-menu-item:hover::after {
+  border-bottom-color: #2f8f65 !important;
+  background-color: transparent !important;
+}
+
+.menu-bar {
+  position: absolute;
+  right: 0;
+  z-index: 40;
+  width: 100%;
+  height: 175px;
+  display: flex;
+  flex-direction: row;
+}
+
+.bar-transparent {
+  background-color: transparent !important;
+  transition: all 0.6s;
+}
+
+.bar-transparent::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  opacity: 0.4;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.bar-visible {
+  background-color: #fff !important;
+  transition: all 0.6s;
+}
+
+.logo-container {
+  margin-left: 30px;
+}
+
+.logo-container .logo {
+  width: 279px;
+  height: 206px;
+  position: relative;
+  z-index: 4;
+}
+
+.menu-right-side {
+  width: calc(100% - 140px);
+}
+
+.menu-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-container .no-show,
+.menu-container .no-show:hover,
+.menu-container .no-show:focus {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.menu-container .menu-root {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  font-family: poppins-regular;
+  font-size: 18px;
+  background-color: transparent !important;
+}
+
+.menu .menu-link-item .active-item {
+  color: #143d2b !important;
+}
+
+.menu .ant-menu-item {
+  margin-right: 30px;
+}
+
+.menu .ant-menu-item:hover {
+  color: #2f8f65 !important;
+  transition: all 0.3s !important;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-justfy-end {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center .header {
+  justify-content: flex-start;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.center span {
+  font-size: 18px;
+  color: white !important;
+  margin: 16px 0;
+  border-bottom: 2px solid white;
+  padding-left: 0px;
+  line-height: 30px;
+}
+
+.center h1 {
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  opacity: 0.8;
+}
+
+.center .centered {
+  align-self: center !important;
+}
+
+.center .copyright {
+  margin-top: 16px;
+  font-size: 12px;
+  align-self: flex-start;
+}
+
+.center ul {
+  list-style: none;
+  margin-left: -50px;
+  margin-top: 10px;
+}
+
+.center ul li {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.center ul li a {
+  font-size: 15px;
+  color: white !important;
+}
+
+.center .h1 {
+  opacity: 1;
+  align-self: flex-start;
+  font-size: 14px !important;
+}
+
+.center .h1 span {
+  color: white !important;
+  border-bottom: none !important;
+  font-size: 14px;
+}
+
+.center ul li .active {
+  border-bottom: 1px solid white !important;
+  opacity: 0.5;
+  transition: all 0.4s ease !important;
+}

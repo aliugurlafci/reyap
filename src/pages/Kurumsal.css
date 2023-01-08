@@ -1,0 +1,80 @@
+.about-container {
+    width: 100%;
+    min-height: 710px;
+    margin-bottom: 50px;
+    padding-top: 200px;
+}
+
+.about-image{
+    width: 200px;
+    height: 400px;
+    border: 1px solid red;
+}
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxMain {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 450px;
+    height: 450px;
+    font-family: poppins-regular;
+}
+
+.about-container .about-header-container {
+    width: 40%;
+    height: 50px;
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-header-container .about-header {
+    width: 80%;
+    text-align: center;
+    font-family: poppins-medium;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.about-container .flex-row {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.flex-row .about-menu {
+    min-width: 15%;
+    height: 100%;
+}
+
+.about-container .about-row {
+    width: 100%;
+}
+
+.about-row .about-col {
+    width: 100%;
+}
+
+.ant-menu-item-selected {
+    background-color: #2f8f65 !important;
+    transition: all 0.4s ease !important;
+}
+
+.ant-card .ant-card-actions>li>span>.anticon:hover{
+    color: #2f8f65 !important;
+} 
+@media screen and (max-width:800px) {
+    .ant-drawer-content-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100% !important;
+        overflow-x: auto;
+    }
+}
