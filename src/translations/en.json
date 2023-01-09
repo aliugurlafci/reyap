@@ -2,6 +2,18 @@
     "translations": {
         "en": "EN",
         "tr": "TR",
-        "username": "Username"
+        "username": "Username",
+        "maxquality": "MAXIMUM QUALITY, THE MOST REASONABLE PRICE!",
+        "aboutreyap": "Burak Plastik, kalite ve sürekliliğin ancak değişen ve gelişen müşteri beklentilerinin tam ve doğru olarak tespit edilmesi ve karşılanması ile mümkün olacağı bilincindedir. Bu nedenle araştıma ve iş geliştirme faaliyetlerine büyük önem vermektedir. Zamanın getirdiği teknoloji ile kaliteli üretim yaparak müşterilerine sunmaktadır. Ürünlerimizi satın almadan, satış sonrasına kadar tüm faaliyetlerinde dikkat edilmesi gereken prensip ilk seferde doğru yapmak ve müşteri memnuniyetini ön planda tutmaktır. Başlıca Ürünlerimiz; plastik saksı , plastik saksı üreticileri, plastik saksı imalatı, plastik saksı üreten firmalar, plastik saksı istoç , kağıt havluluk, plastik kağıt havluluk,toptan kağıt havluluk",
+        "highproductquality": "High Product Quality",
+        "quickproductdelivery": "Quick Product Delivery",
+        "lowpricewarrant": "Low Price Warrant",
+        "customerhappiness": "Customer Happiness",
+        "namesurname": "Name Surname",
+        "phone": "Phone",
+        "mailadress": "Mail Adress",
+        "summary": "Summary",
+        "message": "Message",
+        "send": "Send"
     }
 }

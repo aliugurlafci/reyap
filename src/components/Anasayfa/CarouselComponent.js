@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'antd';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
+import '../../i18n'
 
 export const CarouselComponent = ({ config }) => {
     return (

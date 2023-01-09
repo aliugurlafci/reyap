@@ -13,6 +13,8 @@
     font-size: 20px;
     font-weight: 200;
     color: rgb(108, 108, 108);
+    display: flex;
+    justify-content: center;
 }
 
 .slogan-box{
@@ -26,6 +28,12 @@
     margin-top: 50px;
     background-color: #22745826;
     border-radius: 10px;
+    font-size: 18px;
+}
+
+.slogan-box .icon {
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 
 .slogan-box-main {

@@ -1,24 +1,13 @@
 import React, { useState } from 'react';
-import { PlusOutlined } from '@ant-design/icons';
 import {
-    Col,
     Row,
     Form,
     Input,
     Button,
-    Radio,
-    Select,
-    Cascader,
-    DatePicker,
-    InputNumber,
-    TreeSelect,
-    Switch,
-    Checkbox,
-    Upload,
 } from 'antd';
+import i18n from '../../i18n';
 
 const { TextArea } = Input;
-
 
 export const MapComponent = () => {
     return (
@@ -27,37 +16,37 @@ export const MapComponent = () => {
                 <Row className="contact-header-container">
                     <span className='contact-header'>iletişim</span>
                     <div className='contact-body'>
-                        <div className='contact-map'>
+                        <div>
                             <iframe
+                                className='contact-map'
                                 width="50%"
-                                height="356"
+                                height="356px"
                                 frameborder="0"
-                                scrolling="no"
-                                marginheight="0"
-                                marginwidth="0"
+                                //marginheight="0"
+                                //marginwidth="0"
                                 id="gmap_canvas"
                                 title='reyap-map'
                                 src="https://maps.google.com/maps?width=520&amp;height=356&amp;hl=en&amp;q=Sultanbeyli%20Istanbul+(Our%20Office)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                             </iframe>
                         </div>
-                        <div>
-                            <Form.Item label="Ad Soyad">
-                                <Input />
-                            </Form.Item>
-                            <Form.Item label="Mail Adresiniz">
-                                <Input />
-                            </Form.Item>
-                            <Form.Item label="Telefon">
-                                <Input />
-                            </Form.Item>
-                            <Form.Item label="Konu">
-                                <Input />
-                            </Form.Item>
-                            <Form.Item label="Mesajınız">
-                                <TextArea />
+                        <div className='contact-form'>
+                            <Form.Item>
+                                <Input placeholder={i18n.t("namesurname")}/>
                             </Form.Item>
                             <Form.Item>
-                                <Button>Gönder</Button>
+                                <Input placeholder={i18n.t("phone")}/>
+                            </Form.Item>
+                            <Form.Item >
+                                <Input placeholder={i18n.t("mailadress")}/>
+                            </Form.Item>
+                            <Form.Item>
+                                <Input placeholder={i18n.t("summary")}/>
+                            </Form.Item>
+                            <Form.Item>
+                                <TextArea placeholder={i18n.t("message")}/>
+                            </Form.Item>
+                            <Form.Item>
+                                <Button>{i18n.t("send")}</Button>
                             </Form.Item>
                         </div>
                     </div>
