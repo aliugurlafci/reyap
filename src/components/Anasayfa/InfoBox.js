@@ -4,7 +4,7 @@ import './infoBox.css'
 import test from '../../assets/telephone.png'
 import i18n from '../../i18n';
 
-export const InfoBox = () => {
+export const InfoBox = ({config}) => {
 
     return (
         <div className="info-details">

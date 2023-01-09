@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel, Rate, Text } from 'antd';
-import  Lacoste  from "../../assets/lacst.png";
+import Lacoste from "../../assets/lacst.png";
 
-export const WorkBrands = () => {
+export const WorkBrands = ({ config }) => {
 
     return (
         <div className='buyer-comments-section'>

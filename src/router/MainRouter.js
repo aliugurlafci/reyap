@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     createHashRouter,
     RouterProvider,
     createBrowserRouter
 } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
 import Anasayfa from '../pages/Anasayfa';
 import Kurumsal from '../pages/Kurumsal';
 import Urunler from '../pages/Urunler';
 import Iletisim from '../pages/Iletisim';
+import ProductDetails from '../pages/ProductDetails';
 import NotFound from '../pages/NotFound';
+
+import {
+    CONFIG_CHANGE_OCCUR,
+    LOAD_CONFIG_JSON
+} from '../redux/actions/ConfigAction';
 
 
 const routes = createHashRouter([
@@ -32,10 +39,26 @@ const routes = createHashRouter([
         element: <Iletisim />,
         errorElement: <NotFound />,
     },
+    {
+        path: "/detaylar",
+        element: <ProductDetails />,
+        errorElement: <NotFound />,
+    }
 ]);
 
 export default function MainRouter() {
-
+    const configListener = useSelector(state => state.configListener.changed);
+    const dispatch = useDispatch();
+    /*
+     * configListener tetiklendiğinde yani admin panelinde kaydet butonuna basıldıgında 
+     * config dosyasının güncel halini apiden alıyoruz.
+     */
+    useEffect(() => {
+        if (configListener) {
+            dispatch({ type: LOAD_CONFIG_JSON });
+            dispatch({ type: CONFIG_CHANGE_OCCUR, payload: false });
+        }
+    }, [configListener, dispatch]);
     return (
         <RouterProvider router={routes} />
     );

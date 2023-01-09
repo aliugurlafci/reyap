@@ -7,7 +7,7 @@ import {
     HourglassOutlined
 } from '@ant-design/icons';
 
-export const WorkDetails = () => {
+export const WorkDetails = ({ config }) => {
 
     return (
         <div className="work-details">

@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'antd';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 
-export const CarouselComponent = () => {
+export const CarouselComponent = ({ config }) => {
     return (
         <div className='carousel-section'>
             <Carousel

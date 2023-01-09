@@ -1,65 +1,158 @@
-import React, { useState } from 'react';
-import { Drawer, Row, Col, Divider, Button } from 'antd';
-import { useNavigate } from 'react-router-dom';
-import logoW from '../../assets/logo.png';
-import { MailOutlined } from '@ant-design/icons';
+import React, { useEffect } from 'react';
+import { Row, Col, Image, Table, Button } from 'antd';
 
-const DescriptionItem = ({ title, content }) => (
-    <Row>
-        <Col span={12}>
-            <p className="site-description-item-profile-p-label poppins-regular">{title} :</p>
-        </Col>
-        <Col span={12}>
-            <p className="site-description-item-profile-p-label poppins-regular">{content}</p>
-        </Col>
-    </Row>
-);
+export const ProductDetailsComponent = ({ index }) => {
+    const dataSource = [
+        {
+            key: '1',
+            urun_kodu: "asdada",
+            name: 'asdadadadadd',
+            litre: 1,
+            adet: '10',
+            barkod: "243567"
+        },
+        {
+            key: '2',
+            name: 'asdadadadadd',
+            litre: 1,
+            adet: '10',
+            urun_kodu: "asdada",
+            barkod: "243567"
+        },
+        {
+            key: '3',
+            name: 'asdadadadadd',
+            urun_kodu: "asdada",
+            litre: 1,
+            adet: '10',
+            barkod: "243567"
+        },
+        {
+            key: '4',
+            name: 'asdadadadadd',
+            urun_kodu: "asdada",
+            litre: 1,
+            adet: '10',
+            barkod: "243567"
+        },
+    ];
+    const dataSourcee = [
+        {
+            key: '1',
+            urun_kodu: "asdada",
+            name: 'asdadadadadd',
+            litre: 1,
+            adet: '10',
+            barkod: "243567"
+        },
+        {
+            key: '2',
+            name: 'asdadadadadd',
+            litre: 1,
+            adet: '10',
+            urun_kodu: "asdada",
+            barkod: "243567"
+        },
+        {
+            key: '3',
+            name: 'asdadadadadd',
+            urun_kodu: "asdada",
+            litre: 1,
+            adet: '10',
+            barkod: "243567"
+        },
+        {
+            key: '4',
+            name: 'asdadadadadd',
+            urun_kodu: "asdada",
+            litre: 1,
+            adet: '10',
+            barkod: "243567"
+        },
+        {
+            key: '5',
+            name: 'asdadadadadd',
+            urun_kodu: "asdada",
+            litre: 1,
+            adet: '10',
+            barkod: "243567"
+        },
+        {
+            key: '6',
+            name: 'asdadadadadd',
+            urun_kodu: "asdada",
+            litre: 1,
+            adet: '10',
+            barkod: "243567"
+        },
+        {
+            key: '7',
+            name: 'asdadadadadd',
+            urun_kodu: "asdada",
+            litre: 1,
+            adet: '10',
+            barkod: "243567"
+        },
+    ];
 
-export const ProductDetailsComponent = ({ drawerState, setDrawerState, item }) => {
-    const navigate = useNavigate();
+    const columns = [
+        {
+            title: 'Ürün Kodu',
+            dataIndex: 'urun_kodu',
+            key: 'urun_kodu',
+        },
+        {
+            title: 'Litre',
+            dataIndex: 'litre',
+            key: 'litre',
+        },
+        {
+            title: 'Koli içi adedi',
+            dataIndex: 'adet',
+            key: 'adet',
+        },
+        {
+            title: 'Barkod',
+            dataIndex: 'barkod',
+            key: 'barkod',
+        }
+    ];
+    useEffect(() => {
+        alert(index);
+    }, []);
     return (
-        <Drawer
-            key={item}
-            placement="right"
-            closable={true}
-            onClose={() => setDrawerState(false)}
-            open={drawerState}
-            destroyOnClose
-            size='large'
-            autoFocus>
-            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                <img src={logoW} width={180} height={180} alt="product" />
-            </div>
-            <p className="site-description-item-profile-p poppins-regular">Details</p>
-
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <Divider />
-            <p className="poppins-regular">Company</p>
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <Divider />
-            <p className="poppins-regular">Contacts</p>
-            <DescriptionItem title="Descriptions" content="Answer" />
-            <DescriptionItem title="Descriptions" content="Answer" />
+        <div className="product-details">
+            <Row justify="center" align="middle" gutter={16}>
+                <Col span={6}>
+                    <Image src='https://www.burakplastik.net/wp-content/themes/burakplastik/resizer.php?src=https://www.burakplastik.net/wp-content/uploads/2021/08/F86F881E-CFFF-453E-ABE9-FB664B532A2B-480x420.jpeg&w=260&h=260&zc=2'
+                        alt='iaag'
+                        width="100%"
+                        height="100%" />
+                </Col>
+                <Col span={4}>
+                    <Table
+                        dataSource={dataSource}
+                        columns={columns}
+                        pagination={false}
+                        expandable
+                        size='large' />
+                </Col>
+                <Col span={4}>
+                    <Table
+                        dataSource={dataSourcee}
+                        columns={columns}
+                        pagination={false}
+                        expandable
+                        size='large' />
+                </Col>
+                <Col span={1}></Col>
+                <Col span={1}></Col>
+            </Row>
             <Row>
-                <Col span={24} style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <Button
-                        type='primary'
-                        shape='round'
-                        icon={<MailOutlined />}
-                        size="large"
-                        onClick={() => navigate('/iletisim')} >Lets Contact</Button>
+                <Col span={6}>
+                    <Button type='default'>Order</Button>
                 </Col>
             </Row>
-        </Drawer>
+        </div>
     );
 }

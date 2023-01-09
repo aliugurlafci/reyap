@@ -1,35 +1,26 @@
-import './Kurumsal.css';
+import './ProductDetails.css';
 import React from 'react';
 import { Layout } from 'antd';
+import { useLocation } from 'react-router-dom';
 import {
     FooterComponent,
     MenuComponent,
-    AboutComponent
+    ProductDetailsComponent
 } from '../../src/components/index';
-//import { useSelector } from 'react-redux';
 
 const { Content } = Layout;
 
-export default function Kurumsal() {
-    //const config = useSelector(state => state.config.config);
+export default function ProductDetails() {
+    const { state } = useLocation();
     return (
         <Layout>
             <Layout className='content-layout'>
                 <MenuComponent />
                 <Content className='content'>
-                    <AboutComponent /*config={config.instituonal}*/ />
+                    <ProductDetailsComponent index={state} />
                 </Content>
                 <FooterComponent />
             </Layout>
         </Layout>
     );
 }
-/**
- * Veri şeması
- * 
- * "instituonal": {
-        "image": "example",
-        "title": "example",
-        "details": "example"
-    },
- */

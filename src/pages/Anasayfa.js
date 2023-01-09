@@ -10,18 +10,20 @@ import {
   InfoBox,
   WorkBrands
 } from '../../src/components/index';
+//import { useSelector } from 'react-redux';
 
 const { Content } = Layout;
 
 function Anasayfa() {
+  //const config = useSelector(state => state.config.config);
   return (
     <Layout>
       <MenuComponent />
       <Content >
-        <CarouselComponent />
-        <InfoBox />
-        <WorkDetails />
-        <WorkBrands />
+        <CarouselComponent /*config={config.home.carousel}*/ />
+        <InfoBox /*config={config.home.whatToDo}*/ />
+        <WorkDetails /*config={config.home.aboutUs}*/ />
+        <WorkBrands /*config={config.home.partners}*/ />
       </Content>
       <FooterComponent />
     </Layout>
@@ -29,4 +31,53 @@ function Anasayfa() {
 }
 
 export default Anasayfa;
-/**<CompanyDetails /> */
+
+/** VERİ ŞEMASI
+ * 
+ * "home": {
+        "carousel": [
+            {
+                "key": 1,
+                "carouselImage": "eample",
+                "carouselHeader": "example",
+                "carouselSubText": "example"
+            },
+            {
+                "key": 2,
+                "carouselImage": "example",
+                "carouselHeader": "example",
+                "carouselSubText": "example"
+            }
+        ],
+        "aboutUs": {
+            "header": "example",
+            "description": "example"
+        },
+        "whatToDo": [
+            {
+                "key": 1,
+                "icon": "example",
+                "header": "example",
+                "subHeader": "example"
+            },
+            {
+                "key": 2,
+                "icon": "example",
+                "header": "example",
+                "subHeader": "example"
+            }
+        ],
+        "partners": [
+            {
+                "key": 1,
+                "icon": "example",
+                "description": "gerekirse"
+            },
+            {
+                "key": 2,
+                "icon": "example",
+                "description": "gerekirse"
+            }
+        ]
+    },
+ */
