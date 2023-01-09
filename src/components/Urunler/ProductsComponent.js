@@ -49,8 +49,9 @@ export const ProductComponent = () => {
                                 </Skeleton>
                             </Card>
                         </Col> : <></>
-                })}
-            </Row>
+                })
+                }
+            </Row >
         );
     }
 
