@@ -39,6 +39,15 @@ export const WorkDetails = ({ config }) => {
                         </div>
                     </div>
                 </Col>
+                <Col>
+                    <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
+                        <HourglassOutlined className="item-icon" />
+                        <div className="item-content">
+                            <span className="poppins-regular">+ 5000</span>
+                            <h1 className="poppins-regular">Kullanılmış Plastik</h1>
+                        </div>
+                    </div>
+                </Col>
             </Row>
         </div>
     );

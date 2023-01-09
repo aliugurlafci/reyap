@@ -1,5 +1,5 @@
 import React from "react";
-import { Col } from 'antd';
+import { Col, Row } from 'antd';
 import {
     LikeOutlined,
     SmileOutlined,
@@ -12,29 +12,29 @@ import i18n from '../../i18n';
 export const InfoBox = ({ config }) => {
 
     return (
-        <div className="info-details">
+        <Row className="info-details" justify="center" align="middle" gutter={16}>
             <h1>{i18n.t('maxquality')}</h1>
-            <Col className="box-main">
+            <Col className="box-main" xs={20} sm={20} md={20} lg={20}>
                 {i18n.t('aboutreyap')}
             </Col>
-            <div className="slogan-box-main">
-                <div className="slogan-box">
+            <Row className="slogan-box-main" justify="center" align="middle" gutter={16}>
+                <Col className="slogan-box" xs={20} sm={10} md={10} lg={5}>
                     <LikeOutlined className="icon" />
                     <span>{i18n.t('highproductquality')}</span>
-                </div>
-                <div className="slogan-box">
+                </Col>
+                <Col className="slogan-box" xs={20} sm={10} md={10} lg={5}>
                     <RocketOutlined className="icon" />
                     <span>{i18n.t('quickproductdelivery')}</span>
-                </div>
-                <div className="slogan-box">
+                </Col>
+                <Col className="slogan-box" xs={20} sm={10} md={10} lg={5}>
                     <MoneyCollectOutlined className="icon" />
                     <span>{i18n.t('lowpricewarrant')}</span>
-                </div>
-                <div className="slogan-box">
+                </Col>
+                <Col className="slogan-box" xs={20} sm={10} md={10} lg={5}>
                     <SmileOutlined className="icon" />
                     <span>{i18n.t('customerhappiness')}</span>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Row>
     );
 }
