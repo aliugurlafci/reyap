@@ -19,9 +19,14 @@ export const ProductDetailsComponent = () => {
             key: 'code'
         },
         {
+            title: 'Ölçü Tipi',
+            dataIndex: 'title',
+            key: 'title',
+        },
+        {
             title: 'Ölçüler',
             dataIndex: 'value',
-            key: 'value',
+            key: 'value'
         }
     ];
     const bulkColums = [
@@ -40,7 +45,7 @@ export const ProductDetailsComponent = () => {
         let newSoure = [];
         product.productDetails.map(item => {
             let source = {
-
+                title:item.title,
                 value: item.value,
                 code: product.productCode
             };
