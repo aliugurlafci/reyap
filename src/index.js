@@ -7,6 +7,7 @@ import MainRouter from './router/MainRouter';
 import Store from './redux/store';
 import { FloatButton } from 'antd';
 import { WhatsAppOutlined } from '@ant-design/icons';
+import i18n from './i18n'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,7 +19,7 @@ function Index() {
   return (
     <Provider store={Store()}>
       <MainRouter />
-      <FloatButton icon={<WhatsAppOutlined />} onClick={() => openWp()} tooltip={<div>Sipariş ver</div>} style={{ width: 50, height: 50}} />
+      <FloatButton icon={<WhatsAppOutlined />} onClick={() => openWp()} tooltip={<div>{i18n.t('order')}</div>} style={{width: 50, height: 50}} />
     </Provider>
   );
 }

@@ -18,10 +18,7 @@
 }
 
 .boxMain {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 450px;
-    height: 450px;
+    display: flex;
     font-family: poppins-regular;
 }
 

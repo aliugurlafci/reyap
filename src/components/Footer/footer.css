@@ -4,6 +4,23 @@
   justify-content: space-between;
 }
 
+.left-footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.right-footer {
+  display: flex;
+  flex-direction: row;
+  margin-right: 40px;
+}
+
+.social-icon{
+  width: 40px;
+  height: 40px;
+}
+
 .footer {
   position: statics;
   bottom: 0;

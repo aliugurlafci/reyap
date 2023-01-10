@@ -8,7 +8,7 @@ export const AboutComponent = ({ config }) => {
             <Row wrap justify="center" style={{ marginBottom: 25, padding: 30 }}>
                 <Row className="about-header-container">
                     <span className='about-header'>Kurumsal</span>
-                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+                    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                         <div>
                             <img src={config.image} alt="instituonal"
                                 style={{ width: 300, height: 300 }} />

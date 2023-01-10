@@ -17,11 +17,15 @@
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
+    background-color: rgba(20, 0, 0, 0.811);
+    font-family: poppins-regular;
+    font-weight: 800;
+    border: 2px solid white;
 }
 
 .info span {
     color: white;
-    font-size: 20px;
+    font-size: 40px;
     text-transform: uppercase;
 }
 
