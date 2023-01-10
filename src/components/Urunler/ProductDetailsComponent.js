@@ -1,11 +1,14 @@
 import React from 'react';
 import { Row, Col, Image, Table, Button, Carousel, Form, Input } from 'antd';
 import i18n from '../../i18n';
+import { useLocation } from 'react-router-dom';
 
 const { TextArea } = Input;
 
 
 export const ProductDetailsComponent = ({ index }) => {
+    const { state } = useLocation();
+    console.log(state.products);
     const dataSource = [
         {
             key: '1',
@@ -94,7 +97,6 @@ export const ProductDetailsComponent = ({ index }) => {
             barkod: "243567"
         },
     ];
-
     const columns = [
         {
 

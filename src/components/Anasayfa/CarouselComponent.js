@@ -19,9 +19,8 @@ export const CarouselComponent = ({ config }) => {
                 draggable>
                 {
                     config.map(item => (
-                        <div className='carousel-content'>
+                        <div className='carousel-content' key={item.key}>
                             <img
-                                key={item.key}
                                 src={item.carouselImage}
                                 alt={item.carouseHeader}
                                 decoding='async'
