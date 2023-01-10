@@ -6,50 +6,45 @@ import { useNavigate } from 'react-router-dom';
 
 const { Meta } = Card;
 
-export const ProductComponent = () => {
-    const config = useSelector(state => state.config);
+export const ProductComponent = ({ categories, products }) => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [currentPageIndex, setCurrentPageIndex] = useState(1);
-    const [currentKey, setCurrentKey] = useState("1");
+    const [currentKey, setCurrentKey] = useState(1);
     const [pageSize, setPageSize] = useState(12);
 
-    useEffect(() => {
-        console.log(config.data);
-    }, [config]);
-
     const navigateToDetailsPage = (index) => {
-        navigate("/detaylar", { state: index });
+        navigate("/detaylar", {
+            state: {
+                products: products,
+                selectedProduct: index
+            }
+        });
     }
-
-    const dl = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
-        13, 1, 1, 1, 1, 1, 1, 1, 11, 1, 11, 1,
-        11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 11, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,];
 
     const RenderSelectedGroupItems = () => {
         return (
             <Row wrap gutter={16} className="product-row">
-                {dl.map((i, k) => {
-                    return k >= (currentPageIndex - 1) * pageSize && k < currentPageIndex * pageSize ?
-                        <Col xs={24} sm={12} md={12} lg={8} xl={4}>
+                {products.map(item => {
+                    return item.key >= (currentPageIndex - 1) * pageSize
+                        && item.key < currentPageIndex * pageSize
+                        && item.category === categories[currentKey - 1].name ?
+                        <Col xs={24} sm={12} md={12} lg={8} xl={4} key={item.key}>
                             <Card
-                                onClick={() => navigateToDetailsPage(i)}
-                                key={i}
+                                onClick={() => navigateToDetailsPage(item.key)}
                                 className="product-card"
                                 style={{
                                     marginBottom: 16,
                                     cursor: 'pointer'
                                 }}
                                 cover={
-                                    loading ? <></> : <img src='https://www.burakplastik.net/wp-content/themes/burakplastik/resizer.php?src=https://www.burakplastik.net/wp-content/uploads/2021/08/F86F881E-CFFF-453E-ABE9-FB664B532A2B-480x420.jpeg&w=260&h=260&zc=2'
+                                    loading ? <></> : <img src={item.image[0].url}
                                         className='item-cover-image' alt='item' />
                                 }>
                                 <Skeleton loading={loading} avatar active>
                                     <Meta
-                                        title="Product title"
-                                        description="Product description"
+                                        title={item.name}
+                                        description={item.productCode}
                                         style={{ paddingBottom: 15, marginLeft: 15 }}
                                     />
                                 </Skeleton>
@@ -59,6 +54,9 @@ export const ProductComponent = () => {
                 }
             </Row>
         );
+    }
+    const handleOnMenuClick = (key) => {
+        setCurrentKey(key);
     }
 
     useEffect(() => {
@@ -76,42 +74,29 @@ export const ProductComponent = () => {
                 </Col>
             </Row>
             <Row wrap gutter={16} className="flex-row">
-                <Col xs={24} sm={24} md={6} lg={4} xl={3} style={{ marginBottom: 16 }}>
+                <Col xs={24} sm={24} md={6} lg={6} xl={6} style={{ marginBottom: 16 }}>
                     <div className='product-menu'>
                         <Menu
                             defaultActiveFirst
                             defaultSelectedKeys={[currentKey]}
                             mode="vertical"
                             theme="light"
-                            style={{
-                                backgroundColor: '#fff',
-                                borderTopRightRadius: 8,
-                                borderBottomRightRadius: 8,
-                                height: '100%',
-                            }}
-                            onClick={active => setCurrentKey(active.key)}
+                            className={'category-menu'}
+                            onClick={active => handleOnMenuClick(active.key)}
                             inlineCollapsed={false}
-                            items={[
-                                {
-                                    label: 'Kategori 1',
-                                    key: "1",
-                                    icon: currentKey === "1" ? <ArrowRightOutlined /> : <></>,
-                                },
-                                {
-                                    label: 'Kategori 2',
-                                    key: "2",
-                                    icon: currentKey === "2" ? <ArrowRightOutlined /> : <></>
-                                },
-                                {
-                                    label: 'Kategori 3',
-                                    key: "3",
-                                    icon: currentKey === "3" ? <ArrowRightOutlined /> : <></>
-                                },
-                            ]}
+                            items={
+                                categories.map((item) => {
+                                    return {
+                                        key: item.key,
+                                        label: item.name,
+                                        icon: currentKey === item.key ? <ArrowRightOutlined /> : <></>,
+                                    }
+                                })
+                            }
                         />
                     </div>
                 </Col>
-                <Col xs={22} sm={24} md={18} lg={20} xl={21}>
+                <Col xs={22} sm={22} md={18} lg={18} xl={18}>
                     <div className='product-list'>
                         <RenderSelectedGroupItems />
                     </div>
@@ -123,7 +108,7 @@ export const ProductComponent = () => {
                         current={currentPageIndex}
                         onChange={pageNumber => setCurrentPageIndex(pageNumber)}
                         defaultCurrent={1}
-                        total={dl.length}
+                        total={products.length}
                         showSizeChanger
                         onShowSizeChange={(current, pageSize) => setPageSize(pageSize)}
                         showLessItems

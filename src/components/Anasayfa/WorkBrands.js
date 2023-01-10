@@ -17,70 +17,27 @@ export const WorkBrands = ({ config }) => {
                     autoplaySpeed={1000}
                     waitForAnimate
                     dots={false}
-                    responsive={[{ breakpoint: 900, settings: 'unslick' }]}
-                    slidesToShow={4}
+                    responsive={[{ breakpoint: 800, settings: 'unslick' }]}
+                    slidesToShow={config.length < 6 ? 3 : 6}
                     swipeToSlide
                     adaptiveHeight
                     variableWidth={false}
                     className='comment-carousel'
                     speed={2400}>
-                    <div className='comment-content'>
-                        <div className='image-side'>
-                            <img
-                                src={Lacoste}
-                                alt='test'
-                            />
-                        </div>
-                    </div>
-                    <div className='comment-content'>
-                        <div className='image-side'>
-                            <img
-                                src={Lacoste}
-                                alt='test'
-                            />
-                        </div>
-                    </div>
-                    <div className='comment-content'>
-                        <div className='image-side'>
-                            <img
-                                src={Lacoste}
-                                alt='test'
-                            />
-                        </div>
-                    </div>
-                    <div className='comment-content'>
-                        <div className='image-side'>
-                            <img
-                                src={Lacoste}
-                                alt='test'
-                            />
-                        </div>
-                    </div>
-                    <div className='comment-content'>
-                        <div className='image-side'>
-                            <img
-                                src={Lacoste}
-                                alt='test'
-                            />
-                        </div>
-                    </div>
-                    <div className='comment-content'>
-                        <div className='image-side'>
-                            <img
-                                src={Lacoste}
-                                alt='test'
-                            />
-                        </div>
-                    </div>
-                    <div className='comment-content'>
-                        <div className='image-side'>
-                            <img
-                                src={Lacoste}
-                                alt='test'
-                            />
-                        </div>
-                    </div>
-
+                    {
+                        config.map(item => (
+                            <div className='comment-content' key={item.key}>
+                                <div className='image-side'>
+                                    <a href={item.clickEventUrl} alt="no">
+                                        <img
+                                            src={item.icon}
+                                            alt='test'
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </Carousel>
             </Col>
         </Row>

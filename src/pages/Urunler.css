@@ -41,6 +41,21 @@
 
 }
 
+.order-form {
+    width: 300px;
+    margin-left: 60px;
+}
+
+.category-menu {
+    color: rgb(6, 6, 6) !important;
+    background-color: '#fff';
+    height: 100%,
+}
+
+:where(.css-dev-only-do-not-override-9ntgx0).ant-menu-light .ant-menu-item-selected {
+    color: white;
+}
+
 .product-row .item-cover-image {
     padding: 20px;
     object-fit: contain;

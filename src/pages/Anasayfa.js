@@ -15,19 +15,20 @@ import { useSelector } from 'react-redux';
 const { Content } = Layout;
 
 function Anasayfa() {
-    const config = useSelector(state => state.config.config.config.data);
-
-    useEffect(() => {
-        console.log(config.home.carousel);
-    }, [config]);
+    const config = useSelector(state => state.config.config.config.data.home);
+    const language = useSelector(state => state.languageListener.language);
     return (
         <Layout>
             <MenuComponent />
             <Content >
-                <CarouselComponent config={config.home.carousel} />
-                <InfoBox /*config={config.home.whatToDo} */ />
-                <WorkDetails /*config={config.home.aboutUs} */ />
-                <WorkBrands /*config={config.home.partners} */ />
+                <CarouselComponent config={
+                    language === 'tr' ? config.carousel.TR : config.carousel.EN
+                } />
+                <InfoBox config={
+                    language === 'tr' ? config.aboutUs.TR : config.aboutUs.EN
+                } />
+                <WorkDetails />
+                <WorkBrands config={config.partners} />
             </Content>
             <FooterComponent />
         </Layout>

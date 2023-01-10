@@ -1,5 +1,9 @@
-import React, { useEffect } from 'react';
-import { Row, Col, Image, Table, Button, Carousel } from 'antd';
+import React from 'react';
+import { Row, Col, Image, Table, Button, Carousel, Form, Input } from 'antd';
+import i18n from '../../i18n';
+
+const { TextArea } = Input;
+
 
 export const ProductDetailsComponent = ({ index }) => {
     const dataSource = [
@@ -170,7 +174,30 @@ export const ProductDetailsComponent = ({ index }) => {
             </Row>
             <Row>
                 <Col span={6}>
-                    <Button type='default'>Order</Button>
+                    <div className='order-form'>
+                        <h3>{i18n.t('orderform')}</h3>
+                        <Form.Item>
+                            <Input placeholder={i18n.t("namesurname")} />
+                        </Form.Item>
+                        <Form.Item>
+                            <Input placeholder={i18n.t("phone")} />
+                        </Form.Item>
+                        <Form.Item >
+                            <Input placeholder={i18n.t("mailadress")} />
+                        </Form.Item>
+                        <Form.Item>
+                            <Input placeholder={i18n.t("companyname")} />
+                        </Form.Item>
+                        <Form.Item>
+                            <Input placeholder={i18n.t("pieces")} />
+                        </Form.Item>
+                        <Form.Item>
+                            <TextArea placeholder={i18n.t("ordernote")} />
+                        </Form.Item>
+                        <Form.Item>
+                            <Button>{i18n.t("order")}</Button>
+                        </Form.Item>
+                    </div>
                 </Col>
             </Row>
         </div>
