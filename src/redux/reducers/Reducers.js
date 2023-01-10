@@ -50,7 +50,7 @@ export const LanguageListenerReducer = (state = languageChangeState, action) => 
         case LANGUAGE_CHANGED: {
             return {
                 ...state,
-                changed: action.payload,
+                language: action.payload,
             }
         }
         default: return { ...state }
