@@ -21,6 +21,7 @@
     font-family: poppins-regular;
     font-weight: 800;
     border: 2px solid white;
+    padding: 20px;
 }
 
 .info span {
@@ -163,7 +164,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 1px 1px 3px;
 }
 
-.comment-content{
+.comment-content {
     display: flex !important;
     align-items: center;
     justify-content: center;

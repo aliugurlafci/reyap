@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Card, Skeleton, Col, Row, Menu, Pagination } from 'antd';
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const { Meta } = Card;
@@ -29,18 +28,18 @@ export const ProductComponent = ({ categories, products }) => {
                     return item.key >= (currentPageIndex - 1) * pageSize
                         && item.key < currentPageIndex * pageSize
                         && item.category === categories[currentKey - 1].name ?
-                        <Col xs={24} sm={12} md={12} lg={8} xl={4} key={item.key}>
+                        <Col xs={24} sm={12} md={12} lg={8} xl={6} key={item.key}>
                             <Card
+                                hoverable
                                 onClick={() => navigateToDetailsPage(item.key)}
                                 className="product-card"
                                 style={{
                                     marginBottom: 16,
                                     cursor: 'pointer'
                                 }}
-                                cover={
-                                    loading ? <></> : <img src={item.image[0].url}
-                                        className='item-cover-image' alt='item' />
-                                }>
+                            >
+                                {loading ? <></> : <img src={item.image[0].url}
+                                    className='item-cover-image' alt='item' />}
                                 <Skeleton loading={loading} avatar active>
                                     <Meta
                                         title={item.name}
@@ -74,14 +73,14 @@ export const ProductComponent = ({ categories, products }) => {
                 </Col>
             </Row>
             <Row wrap gutter={16} className="flex-row">
-                <Col xs={24} sm={24} md={6} lg={6} xl={6} style={{ marginBottom: 16 }}>
+                <Col xs={24} sm={24} md={6} lg={6} xl={4} style={{ marginBottom: 16 }}>
                     <div className='product-menu'>
                         <Menu
                             defaultActiveFirst
                             defaultSelectedKeys={[currentKey]}
                             mode="vertical"
                             theme="light"
-                            className={'category-menu'}
+                            className='category-menu'
                             onClick={active => handleOnMenuClick(active.key)}
                             inlineCollapsed={false}
                             items={
@@ -96,7 +95,7 @@ export const ProductComponent = ({ categories, products }) => {
                         />
                     </div>
                 </Col>
-                <Col xs={22} sm={22} md={18} lg={18} xl={18}>
+                <Col xs={22} sm={22} md={18} lg={18} xl={20}>
                     <div className='product-list'>
                         <RenderSelectedGroupItems />
                     </div>

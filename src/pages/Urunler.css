@@ -58,7 +58,11 @@
 
 .product-row .item-cover-image {
     padding: 20px;
+    width: 90%;
+    max-height: 200px;
+    margin: 0 auto;
     object-fit: contain;
+    image-rendering: optimizeSpeed;
 }
 
 .ant-menu-item-selected {
