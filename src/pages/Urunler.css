@@ -43,14 +43,36 @@
 }
 
 .order-form {
-    width: 300px;
     margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .category-menu {
     color: rgb(6, 6, 6) !important;
     background-color: '#fff';
     height: 100%,
+}
+
+.form-part {
+    min-width: 300px !important;
+    flex: 1 !important;
+}
+
+.form-part2 {
+    margin-top: 30px;
+    min-width: 300px !important;
+    flex: 1 !important;
+    margin-left: 10px;
+}
+
+.form-part3 {
+    margin-top: 108px;
+    min-width: 300px !important;
+    flex: 1 !important;
+    margin-left: 10px;
 }
 
 :where(.css-dev-only-do-not-override-9ntgx0).ant-menu-light .ant-menu-item-selected {

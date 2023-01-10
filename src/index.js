@@ -12,7 +12,7 @@ import i18n from './i18n'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const openWp = () => {
-  window.open('https://api.whatsapp.com/send/?phone=905324968590&text&type=phone_number&app_absent=0', '_blank', 'noreferrer');
+  window.open('https://api.whatsapp.com/send/?phone=905302472674&text&type=phone_number&app_absent=0', '_blank', 'noreferrer');
 }
 
 function Index() {

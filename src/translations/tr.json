@@ -11,9 +11,14 @@
         "customerhappiness": "Müşteri Memnuniyeti",
         "namesurname": "Ad Soyad",
         "phone": "Telefon",
-        "mailadress": "Mail Adresniniz",
+        "mailadress": "Mail Adresiniz",
         "summary": "Konu",
         "message": "Mesajınız",
-        "send": "Gönder"
+        "send": "Gönder",
+        "companyname": "Şirket Adı",
+        "pieces": "Adet",
+        "ordernote": "Sipariş Notu",
+        "order": "Sipariş Ver",
+        "orderform": "Sipariş Formu"
     }
 }

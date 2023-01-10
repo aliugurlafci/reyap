@@ -45,7 +45,7 @@ export const ProductDetailsComponent = () => {
         let newSoure = [];
         product.productDetails.map(item => {
             let source = {
-                title:item.title,
+                title: item.title,
                 value: item.value,
                 code: product.productCode
             };
@@ -105,7 +105,7 @@ export const ProductDetailsComponent = () => {
                         col
                         size='large' />
                 </Col>
-                <Col xs={24} sm={24} md={14} lg={4}>
+                <Col xs={24} sm={24} md={14} lg={4} style={{ marginLeft: 10 }}>
                     <Table
                         dataSource={handleBulkDataSource()}
                         columns={bulkColums}
@@ -116,34 +116,40 @@ export const ProductDetailsComponent = () => {
                         size='large' />
                 </Col>
             </Row>
-            <Row>
-                <Col span={6}>
+            <div style={{display:'flex', justifyContent:'center'}}>
+                <div span={10}>
                     <div className='order-form'>
-                        <h3>{i18n.t('orderform')}</h3>
-                        <Form.Item>
-                            <Input placeholder={i18n.t("namesurname")} />
-                        </Form.Item>
-                        <Form.Item>
-                            <Input placeholder={i18n.t("phone")} />
-                        </Form.Item>
-                        <Form.Item >
-                            <Input placeholder={i18n.t("mailadress")} />
-                        </Form.Item>
-                        <Form.Item>
-                            <Input placeholder={i18n.t("companyname")} />
-                        </Form.Item>
-                        <Form.Item>
-                            <Input placeholder={i18n.t("pieces")} />
-                        </Form.Item>
-                        <Form.Item>
-                            <TextArea placeholder={i18n.t("ordernote")} />
-                        </Form.Item>
-                        <Form.Item>
-                            <Button>{i18n.t("order")}</Button>
-                        </Form.Item>
+                        <div className='form-part'>
+                            <h3>{i18n.t('orderform')}</h3>
+                            <Form.Item>
+                                <Input placeholder={i18n.t("namesurname")} />
+                            </Form.Item>
+                            <Form.Item>
+                                <Input placeholder={i18n.t("phone")} />
+                            </Form.Item>
+                        </div>
+                        <div className='form-part2'>
+                            <Form.Item >
+                                <Input placeholder={i18n.t("mailadress")} />
+                            </Form.Item>
+                            <Form.Item>
+                                <Input placeholder={i18n.t("companyname")} />
+                            </Form.Item>
+                        </div>
+                        <div className='form-part3'>
+                            <Form.Item>
+                                <Input placeholder={i18n.t("pieces")} />
+                            </Form.Item>
+                            <Form.Item>
+                                <TextArea placeholder={i18n.t("ordernote")} />
+                            </Form.Item>
+                            <Form.Item style={{display:'flex',justifyContent:'flex-end'}}>
+                                <Button>{i18n.t("order")}</Button>
+                            </Form.Item>
+                        </div>
                     </div>
-                </Col>
-            </Row>
+                </div>
+            </div>
         </div>
     );
 }
