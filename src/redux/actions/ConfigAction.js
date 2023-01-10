@@ -3,7 +3,7 @@ import axios from 'axios';
 export const LOAD_CONFIG_JSON = "LOAD_CONFIG_JSON";
 export const CONFIG_CHANGE_OCCUR = "CONFIG_CHANGE_OCCUR";
 
-const targetUrl = "";
+const targetUrl = "https://api.reyapgroup.com/api/config";
 
 export const loadConfig = () => (dispatch) => {
     axios.get(targetUrl).then((res) => {

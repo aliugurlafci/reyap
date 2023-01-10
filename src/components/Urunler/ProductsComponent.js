@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Card, Skeleton, Col, Row, Menu, Pagination } from 'antd';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const { Meta } = Card;
 
 export const ProductComponent = () => {
+    const config = useSelector(state => state.config);
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [currentPageIndex, setCurrentPageIndex] = useState(1);
     const [currentKey, setCurrentKey] = useState("1");
     const [pageSize, setPageSize] = useState(12);
+
+    useEffect(() => {
+        console.log(config.data);
+    }, [config]);
 
     const navigateToDetailsPage = (index) => {
         navigate("/detaylar", { state: index });
@@ -51,7 +57,7 @@ export const ProductComponent = () => {
                         </Col> : <></>
                 })
                 }
-            </Row >
+            </Row>
         );
     }
 

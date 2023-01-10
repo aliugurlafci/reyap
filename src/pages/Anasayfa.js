@@ -3,31 +3,31 @@ import React from 'react';
 import { Layout } from 'antd';
 import i18n from '../i18n';
 import {
-  CarouselComponent,
-  WorkDetails,
-  FooterComponent,
-  MenuComponent,
-  InfoBox,
-  WorkBrands
+    CarouselComponent,
+    WorkDetails,
+    FooterComponent,
+    MenuComponent,
+    InfoBox,
+    WorkBrands
 } from '../../src/components/index';
-//import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const { Content } = Layout;
 
 function Anasayfa() {
-  //const config = useSelector(state => state.config.config);
-  return (
-    <Layout>
-      <MenuComponent />
-      <Content >
-        <CarouselComponent /*config={config.home.carousel}*/ />
-        <InfoBox /*config={config.home.whatToDo}*/ />
-        <WorkDetails /*config={config.home.aboutUs}*/ />
-        <WorkBrands /*config={config.home.partners}*/ />
-      </Content>
-      <FooterComponent />
-    </Layout>
-  );
+    const config = useSelector(state => state.config.config);
+    return (
+        <Layout>
+            <MenuComponent />
+            <Content >
+                <CarouselComponent config={config.home.carousel} />
+                <InfoBox config={config.home.whatToDo} />
+                <WorkDetails config={config.home.aboutUs} />
+                <WorkBrands config={config.home.partners} />
+            </Content>
+            <FooterComponent />
+        </Layout>
+    );
 }
 
 export default Anasayfa;

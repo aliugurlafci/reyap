@@ -12,7 +12,7 @@ export const ConfigReducer = (state = configState, action) => {
         case LOAD_CONFIG_JSON: {
             return {
                 ...state,
-                config: action.payload
+                config: action.payload.data
             }
         }
         default: return { ...state }

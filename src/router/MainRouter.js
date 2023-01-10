@@ -5,6 +5,7 @@ import {
     createBrowserRouter
 } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
+import { loadConfig } from '../redux/actions/ConfigAction';
 import Anasayfa from '../pages/Anasayfa';
 import Kurumsal from '../pages/Kurumsal';
 import Urunler from '../pages/Urunler';
@@ -55,10 +56,13 @@ export default function MainRouter() {
      */
     useEffect(() => {
         if (configListener) {
-            dispatch({ type: LOAD_CONFIG_JSON });
+            //data yükle
             dispatch({ type: CONFIG_CHANGE_OCCUR, payload: false });
         }
     }, [configListener, dispatch]);
+    useEffect(() => {
+        //data yükle
+    }, [dispatch]);
     return (
         <RouterProvider router={routes} />
     );
