@@ -15,19 +15,19 @@ import { useSelector } from 'react-redux';
 const { Content } = Layout;
 
 function Anasayfa() {
-    const config = useSelector(state => state.config.config);
-    //config -> yüklenen dosya
+    const config = useSelector(state => state.config.config.config.data);
+
     useEffect(() => {
-        console.log(config);
+        console.log(config.home.carousel);
     }, [config]);
     return (
         <Layout>
             <MenuComponent />
             <Content >
-                <CarouselComponent /*config={config.home.carousel}*/ />
+                <CarouselComponent config={config.home.carousel} />
                 <InfoBox /*config={config.home.whatToDo} */ />
-                <WorkDetails /*config={config.home.aboutUs}*/ />
-                <WorkBrands /*config={config.home.partners}*/ />
+                <WorkDetails /*config={config.home.aboutUs} */ />
+                <WorkBrands /*config={config.home.partners} */ />
             </Content>
             <FooterComponent />
         </Layout>
