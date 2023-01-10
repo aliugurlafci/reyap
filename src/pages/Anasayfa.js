@@ -1,5 +1,5 @@
 import './Anasayfa.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Layout } from 'antd';
 import i18n from '../i18n';
 import {
@@ -16,14 +16,18 @@ const { Content } = Layout;
 
 function Anasayfa() {
     const config = useSelector(state => state.config.config);
+    //config -> yüklenen dosya
+    useEffect(() => {
+        console.log(config);
+    }, [config]);
     return (
         <Layout>
             <MenuComponent />
             <Content >
-                <CarouselComponent config={config.home.carousel} />
-                <InfoBox config={config.home.whatToDo} />
-                <WorkDetails config={config.home.aboutUs} />
-                <WorkBrands config={config.home.partners} />
+                <CarouselComponent /*config={config.home.carousel}*/ />
+                <InfoBox /*config={config.home.whatToDo} */ />
+                <WorkDetails /*config={config.home.aboutUs}*/ />
+                <WorkBrands /*config={config.home.partners}*/ />
             </Content>
             <FooterComponent />
         </Layout>

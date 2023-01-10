@@ -1,7 +1,12 @@
-import { LOAD_CONFIG_JSON, CONFIG_CHANGE_OCCUR } from '../actions/ConfigAction';
+import {
+    LOAD_CONFIG_JSON,
+    CONFIG_CHANGE_OCCUR,
+    LOAD_CONFIG_END
+} from '../actions/ConfigAction';
 
 const configState = {
-    config: {}
+    config: {},
+    loading: true
 }
 const configChangeState = {
     changed: false
@@ -12,7 +17,14 @@ export const ConfigReducer = (state = configState, action) => {
         case LOAD_CONFIG_JSON: {
             return {
                 ...state,
-                config: action.payload.data
+                loading: true,
+            }
+        }
+        case LOAD_CONFIG_END: {
+            return {
+                ...state,
+                loading: false,
+                config: action.payload
             }
         }
         default: return { ...state }

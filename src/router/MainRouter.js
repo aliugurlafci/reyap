@@ -12,6 +12,7 @@ import Urunler from '../pages/Urunler';
 import Iletisim from '../pages/Iletisim';
 import ProductDetails from '../pages/ProductDetails';
 import NotFound from '../pages/NotFound';
+import preloader from '../assets/preloader.webp';
 
 import {
     CONFIG_CHANGE_OCCUR,
@@ -49,23 +50,25 @@ const routes = createHashRouter([
 
 export default function MainRouter() {
     const configListener = useSelector(state => state.configListener.changed);
+    const configLoadingListener = useSelector(state => state.config.loading);
+
     const dispatch = useDispatch();
-    /*
-     * configListener tetiklendiğinde yani admin panelinde kaydet butonuna basıldıgında 
-     * config dosyasının güncel halini apiden alıyoruz.
-     */
+
     useEffect(() => {
         if (configListener) {
-            //data yükle
+            dispatch(loadConfig())
             dispatch({ type: CONFIG_CHANGE_OCCUR, payload: false });
         }
     }, [configListener, dispatch]);
     useEffect(() => {
-        //data yükle
+        dispatch(loadConfig())
     }, [dispatch]);
-    return (
-        <RouterProvider router={routes} />
-    );
+
+    return configLoadingListener ?
+        <div className='preloader'>
+            <img src={preloader} alt="preloader" />
+        </div>
+        : <RouterProvider router={routes} />
 }
 /**
  * <RouterProvider router={routes} />

@@ -6,6 +6,26 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader img {
+  width: 200px;
+  height: 200px;
+  box-shadow: rgba(20, 61, 43) 0px 5px 15px;
+  border-radius: 100%;
+  padding: 20px;
+}
+
+
 /* #143d2b */
 @font-face {
   font-family: poppins-thin;
