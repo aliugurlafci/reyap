@@ -11,7 +11,8 @@
         "customerhappiness": "Müşteri Memnuniyeti",
         "namesurname": "Ad Soyad",
         "phone": "Telefon",
-        "mailadress": "Mail Adresiniz",
+        "mailaddress": "Mail Adresiniz",
+        "address": "Adres",
         "summary": "Konu",
         "message": "Mesajınız",
         "send": "Gönder",
@@ -19,6 +20,10 @@
         "pieces": "Adet",
         "ordernote": "Sipariş Notu",
         "order": "Sipariş Ver",
-        "orderform": "Sipariş Formu"
+        "orderform": "Sipariş Formu",
+        "homepage": "Anasayfa",
+        "products":"Ürünler",
+        "contact":"İletişim",
+        "institutional":"Kurumsal"
     }
 }

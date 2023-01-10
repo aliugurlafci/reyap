@@ -11,7 +11,8 @@
         "customerhappiness": "Customer Happiness",
         "namesurname": "Name Surname",
         "phone": "Phone",
-        "mailadress": "Mail Adress",
+        "address":"Address",
+        "mailaddress": "Mail Address",
         "summary": "Summary",
         "message": "Message",
         "send": "Send",
@@ -19,6 +20,10 @@
         "pieces": "Pieces",
         "ordernote": "Order Note",
         "order": "Order",
-        "orderform": "Order Form"
+        "orderform": "Order Form",
+        "homepage": "Homepage",
+        "products":"Products",
+        "contact":"Contact",
+        "institutional":"Institutional"
     }
 }
