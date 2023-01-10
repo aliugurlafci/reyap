@@ -83,12 +83,7 @@ export const ProductComponent = () => {
                             defaultSelectedKeys={[currentKey]}
                             mode="vertical"
                             theme="light"
-                            style={{
-                                backgroundColor: '#fff',
-                                borderTopRightRadius: 8,
-                                borderBottomRightRadius: 8,
-                                height: '100%',
-                            }}
+                            className={'category-menu'}
                             onClick={active => setCurrentKey(active.key)}
                             inlineCollapsed={false}
                             items={[

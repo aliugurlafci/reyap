@@ -86,12 +86,12 @@
 }
 
 .ant-menu-item-selected {
-    background-color: #2f8f65 !important;
+    background-color: #33333372 !important;
     transition: all 0.4s ease !important;
 }
 
 .ant-card .ant-card-actions>li>span>.anticon:hover{
-    color: #2f8f65 !important;
+    color: #272f2c !important;
 } 
 @media screen and (max-width:800px) {
     .ant-drawer-content-wrapper {
