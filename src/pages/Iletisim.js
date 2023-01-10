@@ -6,18 +6,18 @@ import {
     MenuComponent,
     MapComponent
 } from '../../src/components/index';
-//import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const { Content } = Layout;
 
 export default function Iletisim() {
-    //const config = useSelector(state => state.config.config);
+    const config = useSelector(state => state.config.config);
     return (
         <Layout>
             <Layout className='content-layout'>
                 <MenuComponent />
                 <Content className='content'>
-                    <MapComponent /*config={config.contact}*/ />
+                    <MapComponent />
                 </Content>
                 <FooterComponent />
             </Layout>

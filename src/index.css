@@ -1,7 +1,8 @@
 body, html {
   margin: 0;
   padding: 0;
-
+  width: 100%;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -78,7 +79,6 @@ body, html {
 
 :where(.css-dev-only-do-not-override-9ntgx0).ant-menu-light.ant-menu-horizontal>.ant-menu-item::after,
 :where(.css-dev-only-do-not-override-9ntgx0).ant-menu-light.ant-menu-horizontal>.ant-menu-submenu::after {
-  position: absolute;
   inset-inline: 16px;
   bottom: -15px;
   border-bottom: 2px solid transparent;
@@ -193,70 +193,4 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.center .header {
-  justify-content: flex-start;
-  align-self: flex-start;
-  text-align: left;
-}
-
-.center span {
-  font-size: 18px;
-  color: white !important;
-  margin: 16px 0;
-  border-bottom: 2px solid white;
-  padding-left: 0px;
-  line-height: 30px;
-}
-
-.center h1 {
-  color: white;
-  font-size: 14px;
-  line-height: 22px;
-  opacity: 0.8;
-}
-
-.center .centered {
-  align-self: center !important;
-}
-
-.center .copyright {
-  margin-top: 16px;
-  font-size: 12px;
-  align-self: flex-start;
-}
-
-.center ul {
-  list-style: none;
-  margin-left: -50px;
-  margin-top: 10px;
-}
-
-.center ul li {
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.center ul li a {
-  font-size: 15px;
-  color: white !important;
-}
-
-.center .h1 {
-  opacity: 1;
-  align-self: flex-start;
-  font-size: 14px !important;
-}
-
-.center .h1 span {
-  color: white !important;
-  border-bottom: none !important;
-  font-size: 14px;
-}
-
-.center ul li .active {
-  border-bottom: 1px solid white !important;
-  opacity: 0.5;
-  transition: all 0.4s ease !important;
 }

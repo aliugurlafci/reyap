@@ -30,7 +30,9 @@ function Anasayfa() {
                 <WorkDetails />
                 <WorkBrands config={config.partners} />
             </Content>
-            <FooterComponent />
+            <Layout style={{ position: 'relative' }}>
+                <FooterComponent />
+            </Layout>
         </Layout>
     );
 }

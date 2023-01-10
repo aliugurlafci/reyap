@@ -3,6 +3,7 @@
     min-height: 700px;
     margin-bottom: 50px;
     padding-top: 200px;
+    overflow-x: hidden;
 }
 
 .product-container .product-header-container {

@@ -16,17 +16,17 @@
   margin-right: 40px;
 }
 
-.social-icon{
+.social-icon {
   width: 40px;
   height: 40px;
 }
 
 .footer {
-  position: statics;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 22;
   background-color: #143d2b !important;
 }
 

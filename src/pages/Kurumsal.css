@@ -7,9 +7,9 @@
 }
 
 .about-image {
-    width: 200px;
+    width: 500px;
     height: 400px;
-    border: 1px solid red;
+    margin-bottom: 50px;
 }
 
 .about-main {
@@ -20,15 +20,17 @@
 .boxMain {
     display: flex;
     font-family: poppins-regular;
+    text-align: center;
 }
 
 .about-container .about-header-container {
-    width: 40%;
-    height: 50px;
+    width: 80%;
+    height: 100%;
     max-width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .about-header-container .about-header {
@@ -39,10 +41,6 @@
     text-transform: uppercase;
 }
 
-.about-container .flex-row {
-    display: flex !important;
-    flex-direction: row !important;
-}
 
 .flex-row .about-menu {
     min-width: 15%;
