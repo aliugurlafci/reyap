@@ -17,7 +17,7 @@ export const ProductComponent = ({ categories, products }) => {
         navigate("/detaylar", {
             state: {
                 products: products,
-                selectedProduct: index
+                key: index
             }
         });
     }

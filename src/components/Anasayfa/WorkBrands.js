@@ -1,9 +1,12 @@
 import React from 'react';
 import { Carousel, Row, Col } from 'antd';
-import Lacoste from "../../assets/lacst.png";
+
 
 export const WorkBrands = ({ config }) => {
-
+    const carouselResize = () => {
+        const leng = config.lenth;
+        return leng < 6 ? leng < 5 ? leng < 4 ? leng < 3 : 2 : 3 : 4
+    }
     return (
         <Row
             className='buyer-comments-section'
@@ -18,7 +21,7 @@ export const WorkBrands = ({ config }) => {
                     waitForAnimate
                     dots={false}
                     responsive={[{ breakpoint: 800, settings: 'unslick' }]}
-                    slidesToShow={config.length < 6 ? 3 : 6}
+                    slidesToShow={carouselResize()}
                     swipeToSlide
                     adaptiveHeight
                     variableWidth={false}

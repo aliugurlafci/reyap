@@ -1,117 +1,68 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Row, Col, Image, Table, Button, Carousel, Form, Input } from 'antd';
 import i18n from '../../i18n';
+import { useLocation } from 'react-router-dom';
 
 const { TextArea } = Input;
 
 
-export const ProductDetailsComponent = ({ index }) => {
-    const dataSource = [
-        {
-            key: '1',
-            urun_kodu: "asdada",
-            name: 'asdadadadadd',
-            litre: 1,
-            adet: '10',
-        },
-        {
-            key: '2',
-            name: 'asdadadadadd',
-            litre: 1,
-            adet: '10',
-            urun_kodu: "asdada",
-        },
-        {
-            key: '3',
-            name: 'asdadadadadd',
-            urun_kodu: "asdada",
-            litre: 1,
-            adet: '10',
-        },
-        {
-            key: '4',
-            name: 'asdadadadadd',
-            urun_kodu: "asdada",
-            litre: 1,
-            adet: '10',
-        },
-    ];
-    const dataSourcee = [
-        {
-            key: '1',
-            urun_kodu: "asdada",
-            name: 'asdadadadadd',
-            litre: 1,
-            adet: '10',
-            barkod: "243567"
-        },
-        {
-            key: '2',
-            name: 'asdadadadadd',
-            litre: 1,
-            adet: '10',
-            urun_kodu: "asdada",
-            barkod: "243567"
-        },
-        {
-            key: '3',
-            name: 'asdadadadadd',
-            urun_kodu: "asdada",
-            litre: 1,
-            adet: '10',
-            barkod: "243567"
-        },
-        {
-            key: '4',
-            name: 'asdadadadadd',
-            urun_kodu: "asdada",
-            litre: 1,
-            adet: '10',
-            barkod: "243567"
-        },
-        {
-            key: '5',
-            name: 'asdadadadadd',
-            urun_kodu: "asdada",
-            litre: 1,
-            adet: '10',
-            barkod: "243567"
-        },
-        {
-            key: '6',
-            name: 'asdadadadadd',
-            urun_kodu: "asdada",
-            litre: 1,
-            adet: '10',
-            barkod: "243567"
-        },
-        {
-            key: '7',
-            name: 'asdadadadadd',
-            urun_kodu: "asdada",
-            litre: 1,
-            adet: '10',
-            barkod: "243567"
-        },
-    ];
+export const ProductDetailsComponent = () => {
+    const { state } = useLocation();
+    const [product,] = useState(state.products[state.key - 1]);
 
-    const columns = [
-        {
+    //ÜRÜN KODU => product.productCode
 
-            dataIndex: 'urun_kodu',
-            key: 'urun_kodu',
+    const detailsColumns = [
+        {
+            title: 'Ürün Kodu',
+            dataIndex: 'code',
+            key: 'code'
         },
         {
-
-            dataIndex: 'litre',
-            key: 'litre',
-        },
-        {
-
-            dataIndex: 'adet',
-            key: 'adet',
+            title: 'Ölçüler',
+            dataIndex: 'value',
+            key: 'value',
         }
     ];
+    const bulkColums = [
+        {
+            title: 'Adet',
+            key: 'gap',
+            dataIndex: 'gap'
+        },
+        {
+            title: 'Birim fiyatı',
+            key: 'value',
+            dataIndex: 'value'
+        },
+    ]
+    const handleDetailsDataSource = () => {
+        let newSoure = [];
+        product.productDetails.map(item => {
+            let source = {
+
+                value: item.value,
+                code: product.productCode
+            };
+            newSoure.push(source);
+        });
+        return newSoure;
+    }
+
+    const handleBulkDataSource = () => {
+        let newSoure = [];
+        product.bulkDetails.map(item => {
+            let source = {
+                gap: item.gap,
+                value: item.value + " " + item.currency
+            };
+            newSoure.push(source);
+        });
+        return newSoure;
+    }
+    useEffect(() => {
+        console.log(product);
+    }, []);
     return (
         <div className="product-details">
             <Row justify="center" align="top" gutter={[16, 16]}>
@@ -124,50 +75,38 @@ export const ProductDetailsComponent = ({ index }) => {
                         lazyLoad='progressive'
                         swipe
                         draggable>
-                        <Image
-                            src='https://www.burakplastik.net/wp-content/themes/burakplastik/resizer.php?src=https://www.burakplastik.net/wp-content/uploads/2021/08/F86F881E-CFFF-453E-ABE9-FB664B532A2B-480x420.jpeg&w=260&h=260&zc=2'
-                            alt='iaag'
-                            decoding='async'
-                            unselectable='on'
-                            width="100%"
-                            height="100%"
-                            className="product-details-image" />
-                        <Image
-                            src='https://www.burakplastik.net/wp-content/themes/burakplastik/resizer.php?src=https://www.burakplastik.net/wp-content/uploads/2021/08/F86F881E-CFFF-453E-ABE9-FB664B532A2B-480x420.jpeg&w=260&h=260&zc=2'
-                            alt='iaag'
-                            decoding='async'
-                            unselectable='on'
-                            width="100%"
-                            height="100%"
-                            className="product-details-image" />
-                        <Image
-                            src='https://www.burakplastik.net/wp-content/themes/burakplastik/resizer.php?src=https://www.burakplastik.net/wp-content/uploads/2021/08/F86F881E-CFFF-453E-ABE9-FB664B532A2B-480x420.jpeg&w=260&h=260&zc=2'
-                            alt='iaag'
-                            decoding='async'
-                            unselectable='on'
-                            width="100%"
-                            height="100%"
-                            className="product-details-image" />
+                        {
+                            product.image.map(item => (
+                                <Image
+                                    key={item.key}
+                                    src={item.url}
+                                    alt='iaag'
+                                    decoding='async'
+                                    unselectable='on'
+                                    width="100%"
+                                    height="100%"
+                                    className="product-details-image" />
+                            ))
+                        }
                     </Carousel>
                 </Col>
                 <Col xs={24} sm={24} md={14} lg={4}>
                     <Table
-                        dataSource={dataSource}
-                        columns={columns}
+                        dataSource={handleDetailsDataSource()}
+                        columns={detailsColumns}
                         pagination={false}
                         bordered
-                        showHeader={false}
                         expandable
                         col
                         size='large' />
                 </Col>
                 <Col xs={24} sm={24} md={14} lg={4}>
                     <Table
-                        dataSource={dataSourcee}
-                        columns={columns}
+                        dataSource={handleBulkDataSource()}
+                        columns={bulkColums}
                         pagination={false}
                         bordered
-                        showHeader={false}
+
                         expandable
                         size='large' />
                 </Col>
