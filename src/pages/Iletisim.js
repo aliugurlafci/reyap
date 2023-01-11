@@ -4,7 +4,8 @@ import './Iletisim.css'
 import {
     FooterComponent,
     MenuComponent,
-    MapComponent
+    MapComponent,
+    LocationComponent
 } from '../../src/components/index';
 import { useSelector } from 'react-redux';
 
@@ -18,6 +19,7 @@ export default function Iletisim() {
                 <MenuComponent />
                 <Content className='content'>
                     <MapComponent />
+                    <LocationComponent />
                 </Content>
                 <FooterComponent />
             </Layout>

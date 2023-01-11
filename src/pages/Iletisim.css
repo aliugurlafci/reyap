@@ -24,11 +24,42 @@
     min-height: 800px;
 }
 
+.contact-location-main {
+    display: flex;
+    margin-top: 20%;
+    margin-left: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-location-main .item{
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    font-family: 'poppins-medium';
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-location-main .item p{
+    display: flex;
+    margin-top: 20px;
+    width: 250px;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'poppins-medium';
+}
+
+.contact-location-main .items{
+    display: flex;
+    flex-direction: row;
+    font-family: 'poppins-medium';
+}
+
 .contact-container {
     width: 100%;
-    min-height: 710px;
-    margin-bottom: 50px;
     padding-top: 100px;
+    position: relative;
 }
 
 .contact-image {

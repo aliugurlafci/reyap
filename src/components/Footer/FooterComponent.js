@@ -19,7 +19,6 @@ export const FooterComponent = () => {
         <Footer className='footer'>
             <div className='footer-top'>
                 <Row style={{ color: 'white' }} className='left-footer'>
-                    <Col className="poppins-regular">{i18n.t('address')} : HASANPAŞA MAH. FATİH BULV. FATİH İŞ MERK. NO:5/2 SULTANBEYLİ/İSTANBUL</Col>
                     <Col style={{ marginTop: 5 }} className="poppins-regular">{i18n.t('phone')} : +90 (530) 247 26 74</Col>
                     <Col style={{ marginTop: 5 }} className="poppins-regular">{i18n.t('mailaddress')} : satis@reyapgroup.com</Col>
                 </Row>

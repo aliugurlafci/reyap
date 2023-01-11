@@ -9,6 +9,7 @@ import { ProductDetailsComponent } from './Urunler/ProductDetailsComponent';
 import { MapComponent } from "./Iletisim/MapComponent";
 import { InfoBox } from "./Anasayfa/InfoBox";
 import { AboutComponent } from './Kurumsal/AboutComponent';
+import { LocationComponent } from './Iletisim/LocationComponent';
 
 export {
     MenuComponent,
@@ -21,5 +22,6 @@ export {
     ProductDetailsComponent,
     MapComponent,
     InfoBox,
-    AboutComponent
+    AboutComponent,
+    LocationComponent
 }
