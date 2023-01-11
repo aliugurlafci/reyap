@@ -16,11 +16,10 @@ import preloader from '../assets/preloader.webp';
 
 import {
     CONFIG_CHANGE_OCCUR,
-    LOAD_CONFIG_JSON
 } from '../redux/actions/ConfigAction';
 
 
-const routes = createHashRouter([
+const routes = createBrowserRouter([
     {
         path: "/",
         element: <Anasayfa />,
@@ -70,6 +69,3 @@ export default function MainRouter() {
         </div>
         : <RouterProvider router={routes} />
 }
-/**
- * <RouterProvider router={routes} />
- */
