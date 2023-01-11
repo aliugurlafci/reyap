@@ -20,6 +20,7 @@ export const CarouselComponent = ({ config }) => {
                 {
                     config.map(item => (
                         <div className='carousel-content' key={item.key}>
+                            <div className='dark-filter'></div>
                             <img
                                 src={item.carouselImage}
                                 alt={item.carouseHeader}
