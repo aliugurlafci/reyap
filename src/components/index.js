@@ -10,9 +10,11 @@ import { MapComponent } from "./Iletisim/MapComponent";
 import { InfoBox } from "./Anasayfa/InfoBox";
 import { AboutComponent } from './Kurumsal/AboutComponent';
 import { LocationComponent } from './Iletisim/LocationComponent';
+import { CompanyDetails } from './Anasayfa/CompanyDetails';
 
 export {
     MenuComponent,
+    CompanyDetails,
     FooterComponent,
     CarouselComponent,
     WorkDetails,

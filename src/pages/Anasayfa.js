@@ -8,7 +8,8 @@ import {
     FooterComponent,
     MenuComponent,
     InfoBox,
-    WorkBrands
+    WorkBrands,
+    CompanyDetails
 } from '../../src/components/index';
 import { useSelector } from 'react-redux';
 
@@ -27,6 +28,7 @@ function Anasayfa() {
                 <InfoBox config={
                     language === 'tr' ? config.aboutUs.TR : config.aboutUs.EN
                 } />
+                <CompanyDetails />
                 <WorkDetails />
                 <WorkBrands config={config.partners} />
             </Content>

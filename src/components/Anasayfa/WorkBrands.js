@@ -13,6 +13,9 @@ export const WorkBrands = ({ config }) => {
             justify="center"
             align="middle">
             <Col xs={20} sm={20} md={20} lg={20}>
+                <div className='header'>
+                    <h3>Satış Ortaklarımız</h3>
+                </div>
                 <Carousel
                     autoplay
                     pauseOnHover
