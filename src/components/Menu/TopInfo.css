@@ -21,6 +21,7 @@
   .bar-visible {
     background-color: #fff !important;
     transition: all 0.6s;
+    margin-top: -40px;
   }
 
   .infoMain {

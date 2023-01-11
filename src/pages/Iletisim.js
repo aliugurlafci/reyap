@@ -5,9 +5,11 @@ import {
     FooterComponent,
     MenuComponent,
     MapComponent,
-    LocationComponent
+    LocationComponent,
+    FormComponent
 } from '../../src/components/index';
 import { useSelector } from 'react-redux';
+import i18n from '../i18n';
 
 const { Content } = Layout;
 
@@ -19,7 +21,10 @@ export default function Iletisim() {
                 <MenuComponent />
                 <Content className='content'>
                     <MapComponent />
-                    <LocationComponent />
+                    <div className='subcontent'>
+                        <FormComponent />
+                        <LocationComponent />
+                    </div>
                 </Content>
                 <FooterComponent />
             </Layout>

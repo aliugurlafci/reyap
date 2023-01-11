@@ -2,7 +2,6 @@
     width: 100%;
     min-height: 710px;
     margin-bottom: 50px;
-    padding-top: 200px;
     background-color: white;
 }
 
@@ -20,6 +19,13 @@
 .boxMain {
     display: flex;
     font-family: poppins-regular;
+    flex-direction: column;
+}
+
+.boxMain .text{
+    display: flex;
+    font-family: poppins-regular;
+    margin-top: 10px;
 }
 
 .about-container .about-header-container {

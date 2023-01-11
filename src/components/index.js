@@ -11,9 +11,11 @@ import { InfoBox } from "./Anasayfa/InfoBox";
 import { AboutComponent } from './Kurumsal/AboutComponent';
 import { LocationComponent } from './Iletisim/LocationComponent';
 import { CompanyDetails } from './Anasayfa/CompanyDetails';
+import { FormComponent } from './Iletisim/FormComponent';
 
 export {
     MenuComponent,
+    FormComponent,
     CompanyDetails,
     FooterComponent,
     CarouselComponent,

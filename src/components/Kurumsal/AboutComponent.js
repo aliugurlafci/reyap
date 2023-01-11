@@ -14,7 +14,18 @@ export const AboutComponent = ({ config }) => {
                     </Col>
                     <Col xs={24} sm={24} md={10} lg={10}>
                         <div className="boxMain">
-                            {config.details}
+                            <div>
+                                {config.details[0]}
+                            </div>
+                            <div className='text'>
+                                {config.details[1]}
+                            </div>
+                            <div className='text'>
+                                {config.details[2]}
+                            </div>
+                            <div className='text'>
+                                {config.details[3]}
+                            </div>
                         </div>
                     </Col>
                 </Row>
