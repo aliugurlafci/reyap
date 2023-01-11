@@ -26,10 +26,10 @@
 .about-container .about-header-container {
     width: 80%;
     height: 100%;
-    max-width: 70%;
+    max-width: 80%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 100px;
 }
 

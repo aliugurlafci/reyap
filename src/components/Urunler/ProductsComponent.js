@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Card, Skeleton, Col, Row, Menu, Pagination } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import i18n from '../../i18n';
 
 const { Meta } = Card;
 
@@ -69,7 +70,7 @@ export const ProductComponent = ({ categories, products }) => {
         <div className="product-container">
             <Row wrap justify="center" style={{ marginBottom: 25, padding: 30 }}>
                 <Col className="product-header-container">
-                    <span className='product-header'>Ürünlerimiz</span>
+                    <span className='product-header'>{i18n.t('products')}</span>
                 </Col>
             </Row>
             <Row wrap gutter={16} className="flex-row">

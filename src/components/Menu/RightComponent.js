@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, Drawer } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { MenuOutlined } from '@ant-design/icons';
+import i18n from '../../i18n';
 
 export const RightComponent = ({ scrollY, isHome }) => {
     const navigate = useNavigate();
@@ -18,22 +19,22 @@ export const RightComponent = ({ scrollY, isHome }) => {
     const routes = [
         {
             key: 1,
-            label: 'Anasayfa',
+            label: i18n.t('homepage'),
             onClick: () => navigate('/')
         },
         {
             key: 2,
-            label: 'Kurumsal',
+            label: i18n.t('institutional'),
             onClick: () => navigate("/kurumsal")
         },
         {
             key: 3,
-            label: "Ürünler",
+            label: i18n.t('products'),
             onClick: () => navigate("/urunler")
         },
         {
             key: 4,
-            label: 'İletişim',
+            label: i18n.t('contact'),
             onClick: () => navigate("/iletisim")
         },
     ]

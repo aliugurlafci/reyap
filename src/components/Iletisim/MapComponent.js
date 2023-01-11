@@ -15,7 +15,7 @@ export const MapComponent = () => {
         <div className="contact-container">
             <Row wrap justify="center" align="middle" style={{ marginBottom: 25, padding: 30 }}>
                 <Col className="contact-header-container">
-                    <span className='contact-header'>iletişim</span>
+                    <span className='contact-header'>{i18n.t('contact')}</span>
                     <div className='contact-body'>
                         <div>
                             <iframe
@@ -37,7 +37,7 @@ export const MapComponent = () => {
                                 <Input placeholder={i18n.t("phone")} />
                             </Form.Item>
                             <Form.Item >
-                                <Input placeholder={i18n.t("mailadress")} />
+                                <Input placeholder={i18n.t("mailaddress")} />
                             </Form.Item>
                             <Form.Item>
                                 <Input placeholder={i18n.t("summary")} />

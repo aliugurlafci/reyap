@@ -130,7 +130,7 @@ export const ProductDetailsComponent = () => {
                         </div>
                         <div className='form-part2'>
                             <Form.Item >
-                                <Input placeholder={i18n.t("mailadress")} />
+                                <Input placeholder={i18n.t("mailaddress")} />
                             </Form.Item>
                             <Form.Item>
                                 <Input placeholder={i18n.t("companyname")} />
