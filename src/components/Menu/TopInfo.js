@@ -26,7 +26,7 @@ export const TopInfo = () => {
             </div>
             <div className='colInfo'>
                 <a href onClick={() => {changeLanguage('en'); notifyLanguageChange('en')}}>
-                    <img src={eng} style={{ width: 30, height: 26, border: 1, borderRadius: 10 }} alt="EN" onClick={() => notifyLanguageChange('en')} />
+                    <img src={eng} style={{ width: 30, height: 26, border: 1, borderRadius: 10 }} alt="EN" />
                 </a>
             </div>
         </div>
