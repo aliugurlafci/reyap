@@ -16,7 +16,7 @@
 
 .carousel-content .info {
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -41,15 +41,14 @@
 
 .info span {
     color: white;
-    font-size: 40px;
+    font-size: 50px;
     text-transform: uppercase;
 }
 
 .info h1 {
     color: white;
-    font-size: 15px;
+    font-size: 25px;
     margin-top: 12px;
-    text-transform: lowercase;
 }
 
 :where(.css-dev-only-do-not-override-9ntgx0).ant-carousel .slick-next {

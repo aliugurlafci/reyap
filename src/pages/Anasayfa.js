@@ -18,6 +18,7 @@ const { Content } = Layout;
 function Anasayfa() {
     const config = useSelector(state => state.config.config.config.data.home);
     const language = useSelector(state => state.languageListener.language);
+    console.log(config,"sdfsd")
     return (
         <Layout>
             <MenuComponent />

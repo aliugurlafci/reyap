@@ -16,7 +16,10 @@ export const InfoBox = ({ config }) => {
                 <h1>{i18n.t('maxquality')}</h1>
             </div>
             <Col className="box-main" xs={20} sm={20} md={20} lg={20}>
-                {config.description}
+                {config.description[0]}
+            </Col>
+            <Col className="box-main" xs={20} sm={20} md={20} lg={20}>
+            {config.description[1]}
             </Col>
         </Row>
     );
