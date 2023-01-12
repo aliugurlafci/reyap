@@ -19,12 +19,12 @@ export const FooterComponent = () => {
         <Footer className='footer'>
             <div className='footer-top'>
                 <Row style={{ color: 'white' }} className='left-footer'>
-                    <Col style={{ marginTop: 5 }} className="poppins-regular">{i18n.t('phone')} : +90 (530) 247 26 74</Col>
+                    <Col style={{ marginTop: 5 }} className="poppins-regular">{i18n.t('phone')} : +90 (534) 434 44 23</Col>
                     <Col style={{ marginTop: 5 }} className="poppins-regular">{i18n.t('mailaddress')} : satis@reyapgroup.com</Col>
                 </Row>
                 <Row style={{ color: 'white' }} className='right-footer'>
-                    <Col><InstagramOutlined style={{ fontSize: 40 }} /></Col>
-                    <Col style={{ marginLeft: 10 }}><TwitterOutlined style={{ fontSize: 40 }} /></Col>
+                    <Col className='item'>@reyapgroup<InstagramOutlined style={{ fontSize: 30, marginLeft:10 }} /></Col>
+                    <Col className='item'>@reyapgroup<TwitterOutlined style={{ fontSize: 30, marginLeft:10 }} /></Col>
                 </Row>
             </div>
             <Row style={{ color: 'white' }} className='center poppins-regular'>Copyright © 2022 Reyap Plastik</Row>
