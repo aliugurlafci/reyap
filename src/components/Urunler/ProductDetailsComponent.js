@@ -1,6 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { Row, Col, Image, Table, Button, Carousel, Form, Input } from 'antd';
+import React, { useState } from 'react';
+import {
+    Row,
+    Col,
+    Image,
+    Table,
+    Button,
+    Carousel,
+    Form,
+    Input,
+    notification
+} from 'antd';
 import i18n from '../../i18n';
+import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 
 const { TextArea } = Input;
@@ -8,9 +19,9 @@ const { TextArea } = Input;
 
 export const ProductDetailsComponent = () => {
     const { state } = useLocation();
+    const [form] = Form.useForm();
     const [product,] = useState(state.products[state.key - 1]);
-
-    //ÜRÜN KODU => product.productCode
+    const [fetching, setFetching] = useState(false);
 
     const detailsColumns = [
         {
@@ -65,9 +76,31 @@ export const ProductDetailsComponent = () => {
         });
         return newSoure;
     }
-    useEffect(() => {
-        console.log(product);
-    }, []);
+    const onValidateFields = () => {
+        form.validateFields();
+    }
+    const onFinishForm = async (values) => {
+        setFetching(true);
+        values["siparis_zamani"] = new Date().toLocaleString();
+        const { data } = await axios.post("https://api.reyapgroup.com/api/send-order", JSON.stringify(values));
+
+        if (data.status === 200) {
+            notification.success({
+                message: 'Sipariş bilgileriniz başarıyla gönderildi.',
+                description: 'En kısa sürede sizinle iletişime geçeceğiz',
+                placement: 'topRight'
+            });
+            setFetching(false);
+        }
+        else {
+            notification.warning({
+                message: 'Sipariş bilgileriniz gönderilemedi',
+                description: 'Lütfen daha sonra tekrar deneyin',
+                placement: 'topRight'
+            });
+            setFetching(false);
+        }
+    }
     return (
         <div className="product-details">
             <Row justify="center" align="top" gutter={[16, 16]}>
@@ -116,38 +149,47 @@ export const ProductDetailsComponent = () => {
                         size='large' />
                 </Col>
             </Row>
-            <div style={{display:'flex', justifyContent:'center'}}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <div span={10}>
-                    <div className='order-form'>
+                    <Form
+                        className='order-form'
+                        colon={false}
+                        name='contact-form'
+                        requiredMark
+                        labelAlign='left'
+                        form={form}
+                        validateTrigger="onChange"
+                        onValuesChange={() => onValidateFields()}
+                        onFinish={onFinishForm}>
                         <div className='form-part'>
                             <h3>{i18n.t('orderform')}</h3>
-                            <Form.Item>
+                            <Form.Item name="ad">
                                 <Input placeholder={i18n.t("namesurname")} />
                             </Form.Item>
-                            <Form.Item>
+                            <Form.Item name="telefon">
                                 <Input placeholder={i18n.t("phone")} />
                             </Form.Item>
                         </div>
                         <div className='form-part2'>
-                            <Form.Item >
+                            <Form.Item name="email">
                                 <Input placeholder={i18n.t("mailaddress")} />
                             </Form.Item>
-                            <Form.Item>
+                            <Form.Item name="firma">
                                 <Input placeholder={i18n.t("companyname")} />
                             </Form.Item>
                         </div>
                         <div className='form-part3'>
-                            <Form.Item>
+                            <Form.Item name="urun_adedi">
                                 <Input placeholder={i18n.t("pieces")} />
                             </Form.Item>
-                            <Form.Item>
+                            <Form.Item name="aciklama">
                                 <TextArea placeholder={i18n.t("ordernote")} />
                             </Form.Item>
-                            <Form.Item style={{display:'flex',justifyContent:'flex-end'}}>
-                                <Button>{i18n.t("order")}</Button>
+                            <Form.Item style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                                <Button htmlType='submit' loading={fetching}>{i18n.t("order")}</Button>
                             </Form.Item>
                         </div>
-                    </div>
+                    </Form>
                 </div>
             </div>
         </div>

@@ -8,13 +8,10 @@ import {
     LocationComponent,
     FormComponent
 } from '../../src/components/index';
-import { useSelector } from 'react-redux';
-import i18n from '../i18n';
 
 const { Content } = Layout;
 
 export default function Iletisim() {
-    const config = useSelector(state => state.config.config);
     return (
         <Layout>
             <Layout className='content-layout'>
