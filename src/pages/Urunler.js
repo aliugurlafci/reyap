@@ -25,7 +25,9 @@ export default function Urunler() {
                         language === 'tr' ? config.productList.TR : config.productList.EN
                     } />
             </Content>
-            <FooterComponent />
+            <Layout>
+                <FooterComponent />
+            </Layout>
         </Layout>
     );
 }

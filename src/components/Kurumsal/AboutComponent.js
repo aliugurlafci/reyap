@@ -5,7 +5,7 @@ import i18n from '../../i18n';
 export const AboutComponent = ({ config }) => {
     return (
         <div className="about-container">
-            <Row wrap justify="center" style={{ marginBottom: 25, padding: 30 }} gutter={16}>
+            <Row wrap justify="center" style={{ marginBottom: 25, padding: 30 }} gutter={16} align="middle" >
                 <Row className="about-header-container">
                     <span className='about-header'>{i18n.t('institutional')}</span>
                     <Col xs={24} sm={24} md={10} lg={10}>
@@ -14,18 +14,13 @@ export const AboutComponent = ({ config }) => {
                     </Col>
                     <Col xs={24} sm={24} md={10} lg={10}>
                         <div className="boxMain">
-                            <div>
-                                {config.details[0]}
-                            </div>
-                            <div className='text'>
-                                {config.details[1]}
-                            </div>
-                            <div className='text'>
-                                {config.details[2]}
-                            </div>
-                            <div className='text'>
-                                {config.details[3]}
-                            </div>
+                            {
+                                config.details.map(item => (
+                                    <div className='text'>
+                                        {item}
+                                    </div>
+                                ))
+                            }
                         </div>
                     </Col>
                 </Row>

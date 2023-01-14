@@ -10,3 +10,11 @@
 .dots>.slick-active button {
     background-color: #3fbb85 !important;
 }
+
+.ant-input {
+    border-color: #7e817e;
+}
+
+.ant-input:hover {
+    border-color: #143d2b !important;
+}

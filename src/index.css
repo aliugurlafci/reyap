@@ -27,6 +27,24 @@ body, html {
   padding: 20px;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  position: relative;
+  z-index: 51;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #143d2b;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #143d2b;
+}
 
 /* #143d2b */
 @font-face {
@@ -125,14 +143,23 @@ body, html {
 }
 
 .logo-container {
-  margin-left: 30px;
+  width: 250px;
+  height: 200px;
 }
 
 .logo-container .logo {
-  width: 279px;
-  height: 206px;
+  width: 240px;
+  height: 200px;
   position: relative;
   z-index: 4;
+  transition: all 0.4s ease;
+}
+
+@media screen and (max-width:850px) {
+  .logo-container .logo {
+    width: 170px;
+    height: 130px;
+  }
 }
 
 .menu-right-side {

@@ -17,12 +17,12 @@ export const TopInfo = () => {
     return (
         <div className='infoMain'>
             <div className='colInfo'>
-                <a href onClick={() => notifyLanguageChange('tr')}>
+                <a href={true} onClick={() => notifyLanguageChange('tr')}>
                     <img src={tr} style={{ width: 30, height: 30 }} alt="TR" />
                 </a>
             </div>
             <div className='colInfo'>
-                <a href onClick={() => notifyLanguageChange('en')}>
+                <a href={true} onClick={() => notifyLanguageChange('en')}>
                     <img src={eng} style={{ width: 30, height: 26, border: 1, borderRadius: 10 }} alt="EN" />
                 </a>
             </div>

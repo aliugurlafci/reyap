@@ -24,8 +24,7 @@
     min-height: 800px;
 }
 
-.content-layout .content{
-}
+.content-layout .content {}
 
 .subcontent {
     display: flex;
@@ -39,7 +38,7 @@
     align-items: center;
 }
 
-.contact-location-main .item{
+.contact-location-main .item {
     display: flex;
     flex-direction: row;
     font-family: 'poppins-medium';
@@ -49,14 +48,14 @@
     align-items: center;
 }
 
-.contact-location-main .item p{
+.contact-location-main .item p {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'poppins-medium';
 }
 
-.contact-location-main .items{
+.contact-location-main .items {
     display: flex;
     flex-direction: column;
     font-family: 'poppins-medium';
@@ -125,8 +124,12 @@
 }
 
 .ant-menu-item-selected {
-    background-color: #33333372 !important;
-    transition: all 0.4s ease !important;
+    transition: all 0.1s ease !important;
+}
+
+.ant-menu-light .ant-menu-item-selected {
+    color: white !important;
+    transition: all 0.1s ease !important;
 }
 
 .ant-card .ant-card-actions>li>span>.anticon:hover {

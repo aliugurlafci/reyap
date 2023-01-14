@@ -11,6 +11,7 @@ export const ProductComponent = ({ categories, products }) => {
     const [loading, setLoading] = useState(true);
     const [currentPageIndex, setCurrentPageIndex] = useState(1);
     const [currentKey, setCurrentKey] = useState(1);
+    const [displayItems, setDisplayItems] = useState([...products]);
 
     const navigateToDetailsPage = (index) => {
         navigate("/detaylar", {
@@ -20,70 +21,11 @@ export const ProductComponent = ({ categories, products }) => {
             }
         });
     }
-    const RenderSelectedGroupItems = () => {
-        return (
-            <Row wrap gutter={16} className="product-row">
-                {products.map(item => {
-                    return currentKey !== 1 && item.category === categories[currentKey - 1].name ?
-                        <Col xs={24} sm={12} md={12} lg={8} xl={6} key={item.key}>
-                            <Card
-                                hoverable
-                                onClick={() => navigateToDetailsPage(item.key)}
-                                className="product-card"
-                                style={{
-                                    marginBottom: 16,
-                                    cursor: 'pointer',
-                                    maxWidth: 280,
-                                    minHeight: 330
-                                }}
-                            >
-                                {loading ? <></> : <img src={item.image[0].url}
-                                    className='item-cover-image' alt='item' />}
-                                <Skeleton loading={loading} avatar active>
-                                    <Meta
-                                        title={item.name}
-                                        description={item.productCode}
-                                        style={{ paddingBottom: 15, marginLeft: 15 }}
-                                    />
-                                </Skeleton>
-                            </Card>
-                        </Col> : <Col xs={24} sm={12} md={12} lg={8} xl={6} key={item.key}>
-                            <Card
-                                hoverable
-                                onClick={() => navigateToDetailsPage(item.key)}
-                                className="product-card"
-                                style={{
-                                    marginBottom: 16,
-                                    cursor: 'pointer',
-                                    maxWidth: 280,
-                                    minHeight: 330
-                                }}
-                            >
-                                {loading ? <></> : <img src={item.image[0].url}
-                                    className='item-cover-image' alt='item' />}
-                                <Skeleton loading={loading} avatar active>
-                                    <Meta
-                                        title={item.name}
-                                        description={item.productCode}
-                                        style={{ paddingBottom: 15, marginLeft: 15 }}
-                                    />
-                                </Skeleton>
-                            </Card>
-                        </Col>
-                })
-                }
-            </Row>
-        );
-    }
-    const handleOnMenuClick = (key) => {
-        setCurrentKey(key);
-    }
     useEffect(() => {
         setLoading(true);
-        setTimeout(() => {
-            setLoading(false);
-        }, 500);
-    }, [currentKey, currentPageIndex]);
+        currentKey === String(1) || currentKey === 1 ? setDisplayItems(products) : setDisplayItems(products.filter(x => x.category === categories[currentKey - 1].name));
+        setLoading(false);
+    }, [categories, currentKey, products]);
 
     return (
         <div className="product-container">
@@ -97,26 +39,53 @@ export const ProductComponent = ({ categories, products }) => {
                 <Col xs={24} sm={24} md={4} lg={4} style={{ marginBottom: 16 }}>
                     <div className='product-menu'>
                         <Menu
-                            defaultSelectedKeys={[currentKey]}
+                            selectedKeys={["1"]}
+                            selectable
                             mode="vertical"
                             theme="light"
                             className='category-menu'
-                            onClick={active => handleOnMenuClick(active.key)}
-                            inlineCollapsed={false}
+                            onClick={active => setCurrentKey(active.key)}
                             items={
                                 categories.map((item) => {
                                     return {
                                         key: item.key,
-                                        label: item.name,
-                                        icon: currentKey === item.key ? <ArrowRightOutlined /> : <></>,
+                                        label: item.name
                                     }
                                 })
                             }
                         />
                     </div>
                 </Col>
-                <Col xs={22} sm={22} md={18} lg={18}>
-                    <RenderSelectedGroupItems />
+                <Col xs={22} sm={22} md={20} lg={20}>
+                    <Row wrap gutter={16} className="product-row">
+                        {
+                            displayItems.map(item => (
+                                <Col xs={24} sm={12} md={12} lg={6} xl={4} key={item.productCode}>
+                                    <Card
+                                        hoverable
+                                        onClick={() => navigateToDetailsPage(item.key)}
+                                        className="product-card"
+                                        style={{
+                                            marginBottom: 16,
+                                            cursor: 'pointer',
+                                            maxWidth: 260,
+                                            minHeight: 320
+                                        }}
+                                    >
+                                        {loading ? <></> : <img src={item.image[0].url}
+                                            className='item-cover-image' alt='item' />}
+                                        <Skeleton loading={loading} avatar active>
+                                            <Meta
+                                                title={item.name}
+                                                description={item.productCode}
+                                                style={{ paddingBottom: 15, marginLeft: 15 }}
+                                            />
+                                        </Skeleton>
+                                    </Card>
+                                </Col>
+                            ))
+                        }
+                    </Row>
                 </Col>
             </Row>
             <Row wrap gutter={16} style={{ marginTop: 25 }} justify="center">

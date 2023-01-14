@@ -19,7 +19,12 @@ function Index() {
   return (
     <Provider store={Store()}>
       <MainRouter />
-      <FloatButton icon={<WhatsAppOutlined />} onClick={() => openWp()} tooltip={<div>{i18n.t('order')}</div>} style={{width: 50, height: 50}} />
+      <FloatButton
+        type=''
+        icon={<WhatsAppOutlined style={{ color: '#fff', fontSize: 22, }} />}
+        onClick={() => openWp()}
+        tooltip={<div>{i18n.t('order')}</div>}
+        style={{ width: 60, height: 60, backgroundColor: '#143d2b' }} />
     </Provider>
   );
 }

@@ -104,7 +104,7 @@ export const ProductDetailsComponent = () => {
     return (
         <div className="product-details">
             <Row justify="center" align="top" gutter={[16, 16]}>
-                <Col xs={20} sm={18} md={12} lg={6}>
+                <Col xs={20} sm={18} md={12} lg={8}>
                     <Carousel
                         autoplay
                         dots={{ className: "dots" }}
@@ -121,32 +121,31 @@ export const ProductDetailsComponent = () => {
                                     alt='iaag'
                                     decoding='async'
                                     unselectable='on'
-                                    width="100%"
-                                    height="100%"
+                                    width="500px"
+                                    height="540px"
+                                    loading='lazy'
                                     className="product-details-image" />
                             ))
                         }
                     </Carousel>
                 </Col>
-                <Col xs={24} sm={24} md={14} lg={4}>
+                <Col xs={20} sm={18} md={12} lg={8}>
                     <Table
                         dataSource={handleDetailsDataSource()}
                         columns={detailsColumns}
                         pagination={false}
                         bordered
                         expandable
-                        col
-                        size='large' />
-                </Col>
-                <Col xs={24} sm={24} md={14} lg={4} style={{ marginLeft: 10 }}>
+                        size='large'
+                        style={{ marginBottom: 40 }} />
                     <Table
                         dataSource={handleBulkDataSource()}
                         columns={bulkColums}
                         pagination={false}
                         bordered
-
                         expandable
-                        size='large' />
+                        size='large'
+                    />
                 </Col>
             </Row>
             <div style={{ display: 'flex', justifyContent: 'center' }}>

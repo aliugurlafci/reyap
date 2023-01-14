@@ -12,9 +12,9 @@ export const WorkBrands = ({ config }) => {
             className='buyer-comments-section'
             justify="center"
             align="middle">
-            <Col xs={20} sm={20} md={20} lg={20}>
+            <Col xs={24} sm={22} md={20} lg={20}>
                 <div className='header'>
-                    <h3>Satış Ortaklarımız</h3>
+                    <h3>Satış Noktalarımız</h3>
                 </div>
                 <Carousel
                     autoplay
@@ -27,8 +27,9 @@ export const WorkBrands = ({ config }) => {
                     slidesToShow={carouselResize()}
                     swipeToSlide
                     adaptiveHeight
+                    centerMode
                     variableWidth={false}
-                    className='comment-carousel'
+                    className='comment-carousel center'
                     speed={2400}>
                     {
                         config.map(item => (
