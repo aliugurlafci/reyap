@@ -60,7 +60,7 @@ export const ProductComponent = ({ categories, products }) => {
                     <Row wrap gutter={16} className="product-row">
                         {
                             displayItems.map(item => (
-                                <Col xs={6} sm={12} md={12} lg={12} xl={4} key={item.productCode}>
+                                <Col xs={6} sm={12} md={12} lg={12} xl={6} key={item.productCode}>
                                     <Card
                                         hoverable
                                         onClick={() => navigateToDetailsPage(item.key)}
