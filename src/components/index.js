@@ -3,7 +3,6 @@ import { FooterComponent } from "./Footer/FooterComponent";
 import { CarouselComponent } from "./Anasayfa/CarouselComponent";
 import { WorkDetails } from "./Anasayfa/WorkDetails";
 import { WorkBrands } from "./Anasayfa/WorkBrands";
-import { CompanionsComponent } from './Anasayfa/CompanionsComponent';
 import { ProductComponent } from "./Urunler/ProductsComponent";
 import { ProductDetailsComponent } from './Urunler/ProductDetailsComponent';
 import { MapComponent } from "./Iletisim/MapComponent";
@@ -21,7 +20,6 @@ export {
     CarouselComponent,
     WorkDetails,
     WorkBrands,
-    CompanionsComponent,
     ProductComponent,
     ProductDetailsComponent,
     MapComponent,
