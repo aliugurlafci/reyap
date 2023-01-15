@@ -21,7 +21,7 @@ function Index() {
       <MainRouter />
       <FloatButton
         type=''
-        icon={<WhatsAppOutlined style={{ marginLeft: -2 ,color: '#fff', fontSize: 22, }} />}
+        icon={<WhatsAppOutlined style={{ color: '#fff', fontSize: 22 }} />}
         onClick={() => openWp()}
         tooltip={<div>{i18n.t('order')}</div>}
         style={{ width: 60, height: 60, marginRight:16, backgroundColor: '#25d366' }} />

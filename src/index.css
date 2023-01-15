@@ -88,6 +88,11 @@ body, html {
   background-color: #fff !important;
 }
 
+.content .topContent{
+  display: flex;
+  flex-direction: row;
+}
+
 :where(.css-dev-only-do-not-override-9ntgx0).ant-menu-horizontal {
   border-bottom: none !important;
 }

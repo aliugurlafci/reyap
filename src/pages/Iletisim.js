@@ -17,10 +17,12 @@ export default function Iletisim() {
             <Layout className='content-layout'>
                 <MenuComponent />
                 <Content className='content'>
-                    <MapComponent />
+                    <div className='topContent'>
+                        <MapComponent />
+                        <LocationComponent />
+                    </div>
                     <div className='subcontent'>
                         <FormComponent />
-                        <LocationComponent />
                     </div>
                 </Content>
                 <FooterComponent />
