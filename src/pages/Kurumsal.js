@@ -20,7 +20,7 @@ export default function Kurumsal() {
                 <Content className='content'>
                     <AboutComponent config={language === 'tr' ? config.TR : config.EN} />
                 </Content>
-                <Layout style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', zIndex: 3 }}>
+                <Layout style={{ bottom: 0, left: 0, width: '100%', zIndex: 3 }}>
                     <FooterComponent />
                 </Layout>
             </Layout>

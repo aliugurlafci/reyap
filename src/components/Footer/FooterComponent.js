@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Layout, Col, Row } from 'antd';
+import { Link } from 'react-router-dom';
 import './footer.css';
 import {
-    TwitterOutlined,
+    FacebookOutlined,
     InstagramOutlined
 } from '@ant-design/icons';
 import i18n from '../../i18n';
@@ -23,8 +24,12 @@ export const FooterComponent = () => {
                     <Col style={{ marginTop: 5 }} className="poppins-regular">{i18n.t('mailaddress')} : satis@reyapgroup.com</Col>
                 </Row>
                 <Row style={{ color: 'white' }} className='right-footer' gutter={[0, 8]}>
-                    <Col className='item'>@reyapgroup<InstagramOutlined style={{ fontSize: 30, marginLeft: 10 }} /></Col>
-                    <Col className='item'>@reyapgroup<TwitterOutlined style={{ fontSize: 30, marginLeft: 10 }} /></Col>
+                    <a style={{color:'white'}} href="https://www.instagram.com/reyapgroup_/">
+                        <Col className='item'>@reyapgroup<InstagramOutlined style={{ fontSize: 30, marginLeft: 10 }} /></Col>
+                    </a>
+                    <a style={{color:'white'}} href='https://www.facebook.com/reyapgroup_/'>
+                        <Col className='item'>@reyapgroup<FacebookOutlined style={{ fontSize: 30, marginLeft: 10 }} /></Col>
+                    </a>
                 </Row>
             </div>
             <Row style={{ color: 'white' }} className='center poppins-regular'>Copyright © 2022 Reyap Plastik</Row>
