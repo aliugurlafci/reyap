@@ -1,7 +1,3 @@
-.contact-container {
-    margin-top: 100px
-}
-
 .contact-map {
     width: 570px;
     height: 400px;
@@ -10,13 +6,12 @@
 .contact-form {
     width: 300px;
     height: 300px;
-    margin-left: 60px;
+    margin-top: 30px;
 }
 
 .contact-body {
     display: flex;
     flex-direction: row;
-    padding: 50px;
 }
 
 .content-layout {
@@ -26,9 +21,9 @@
 
 .subcontent {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 40px;
 }
 
 .contact-location-main {
@@ -58,11 +53,11 @@
     display: flex;
     flex-direction: column;
     font-family: 'poppins-medium';
-    margin-top: 265px;
 }
 
 .contact-container {
     position: relative;
+    padding-bottom: 50px;
 }
 
 .contact-image {
@@ -85,11 +80,10 @@
 }
 
 .contact-container .contact-header-container {
-    height: 50px;
+    height: 100px;
     max-width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding-top: 200px;
     justify-content: center;
 }
@@ -99,6 +93,7 @@
     font-family: poppins-medium;
     font-size: 24px;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
 
 .contact-container .flex-row {

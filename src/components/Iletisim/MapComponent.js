@@ -13,7 +13,7 @@ const { TextArea } = Input;
 export const MapComponent = () => {
     return (
         <div className="contact-container">
-            <Row wrap justify="center" align="middle" style={{ marginBottom: 25, padding: 30 }}>
+            <Row wrap align="middle" style={{ marginBottom: 25, padding: 30 }}>
                 <Col className="contact-header-container">
                 <span className='contact-header'>{i18n.t('contact')}</span>
                     <div className='contact-body'>

@@ -19,11 +19,13 @@ export default function Iletisim() {
                 <Content className='content'>
                     <div className='topContent'>
                         <MapComponent />
-                        <LocationComponent />
+                        <div className='subcontent'>
+                            <LocationComponent />
+                            <FormComponent />
+                        </div>
                     </div>
-                    <div className='subcontent'>
-                        <FormComponent />
-                    </div>
+{/*                     <div className='subcontent'>
+                    </div> */}
                 </Content>
                 <FooterComponent />
             </Layout>
