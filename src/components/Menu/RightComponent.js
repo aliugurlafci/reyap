@@ -51,8 +51,7 @@ export const RightComponent = ({ scrollY, isHome }) => {
                     selectable={false}
                     overflowedIndicator={
                         <MenuOutlined
-                            onMouseEnter={() => setShowDrawer(true)}
-                            onTouchStart={() => setShowDrawer(true)}
+                            onClick={() => setShowDrawer(true)}
                             style={{ fontSize: 24 }}
                         />}
                     items={routes}

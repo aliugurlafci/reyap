@@ -36,7 +36,7 @@ export const ProductComponent = ({ categories, products }) => {
                 </Col>
             </Row>
             <Row wrap gutter={16} className="flex-row">
-                <Col xs={24} sm={24} md={4} lg={4} style={{ marginBottom: 16 }}>
+                <Col xs={24} sm={24} md={6} lg={4} style={{ marginBottom: 16 }}>
                     <div className='product-menu'>
                         <Menu
                             selectedKeys={["1"]}
@@ -56,11 +56,11 @@ export const ProductComponent = ({ categories, products }) => {
                         />
                     </div>
                 </Col>
-                <Col xs={22} sm={22} md={20} lg={20}>
+                <Col xs={22} sm={22} md={18} lg={20}>
                     <Row wrap gutter={16} className="product-row">
                         {
                             displayItems.map(item => (
-                                <Col xs={6} sm={12} md={12} lg={12} xl={6} key={item.productCode}>
+                                <Col xs={24} sm={12} md={12} lg={8} xl={5} key={item.productCode}>
                                     <Card
                                         hoverable
                                         onClick={() => navigateToDetailsPage(item.key)}
@@ -68,8 +68,8 @@ export const ProductComponent = ({ categories, products }) => {
                                         style={{
                                             marginBottom: 16,
                                             cursor: 'pointer',
-                                            maxWidth: 260,
-                                            minHeight: 320
+                                            maxWidth: 280,
+                                            minHeight: 340
                                         }}
                                     >
                                         {loading ? <></> : <img src={item.image[0].url}

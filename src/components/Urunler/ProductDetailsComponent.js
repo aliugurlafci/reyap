@@ -105,14 +105,19 @@ export const ProductDetailsComponent = () => {
     return (
         <div className="product-details">
             <Row justify="center" align="top" gutter={[16, 16]}>
-                <Col xs={20} sm={18} md={12} lg={8}>
+                <Col xs={20} sm={18} md={16} lg={8}>
                     <Carousel
                         autoplay
+                        pauseOnHover
                         dots={{ className: "dots" }}
                         autoplaySpeed={2000}
                         effect='scrollx'
                         lazyLoad='progressive'
                         swipe
+                        centerMode
+                        variableWidth
+                        style={{ maxWidth: '100%', maxHeight: 540 }}
+                        className='product-details-carousel'
                         draggable>
                         {
                             product.image.map(item => (
@@ -122,10 +127,8 @@ export const ProductDetailsComponent = () => {
                                     alt='iaag'
                                     decoding='async'
                                     unselectable='on'
-                                    width="500px"
-                                    height="540px"
-                                    loading='lazy'
-                                    className="product-details-image" />
+                                    style={{ maxWidth: 500, maxHeight: 540 }}
+                                    loading='lazy' />
                             ))
                         }
                     </Carousel>
@@ -149,7 +152,7 @@ export const ProductDetailsComponent = () => {
                     />
                 </Col>
             </Row>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>
                 <div span={10}>
                     <Form
                         className='order-form'
@@ -161,7 +164,45 @@ export const ProductDetailsComponent = () => {
                         validateTrigger="onChange"
                         onValuesChange={() => onValidateFields()}
                         onFinish={onFinishForm}>
-                        <div className='form-part'>
+                        <Row align="middle" gutter={10}>
+                            <Col className='form-part' xs={24} sm={24} md={24} lg={5}>
+                                <h3>{i18n.t('orderform')}</h3>
+                                <Form.Item name="ad">
+                                    <Input placeholder={i18n.t("namesurname")} />
+                                </Form.Item>
+                                <Form.Item name="telefon">
+                                    <Input placeholder={i18n.t("phone")} />
+                                </Form.Item>
+                            </Col>
+                            <Col className='form-part2' xs={24} sm={24} md={24} lg={5}>
+                                <Form.Item name="email">
+                                    <Input placeholder={i18n.t("mailaddress")} />
+                                </Form.Item>
+                                <Form.Item name="firma">
+                                    <Input placeholder={i18n.t("companyname")} />
+                                </Form.Item>
+                            </Col>
+                            <Col className='form-part3' xs={24} sm={24} md={24} lg={5}>
+                                <Form.Item name="urun_adedi">
+                                    <Input placeholder={i18n.t("pieces")} />
+                                </Form.Item>
+                                <Form.Item name="aciklama">
+                                    <TextArea placeholder={i18n.t("ordernote")} />
+                                </Form.Item>
+                                <Form.Item style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                                    <Button htmlType='submit' loading={fetching}>{i18n.t("order")}</Button>
+                                </Form.Item>
+                            </Col>
+                        </Row>
+                    </Form>
+                </div>
+            </div>
+        </div>
+    );
+}
+/**
+ * 
+ * <div className='form-part'>
                             <h3>{i18n.t('orderform')}</h3>
                             <Form.Item name="ad">
                                 <Input placeholder={i18n.t("namesurname")} />
@@ -189,9 +230,4 @@ export const ProductDetailsComponent = () => {
                                 <Button htmlType='submit' loading={fetching}>{i18n.t("order")}</Button>
                             </Form.Item>
                         </div>
-                    </Form>
-                </div>
-            </div>
-        </div>
-    );
-}
+ */

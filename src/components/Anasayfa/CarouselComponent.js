@@ -9,6 +9,7 @@ export const CarouselComponent = ({ config }) => {
         <div className='carousel-section'>
             <Carousel
                 autoplay
+                autoplaySpeed={4000}
                 effect='fade'
                 lazyLoad='progressive'
                 infinite
@@ -30,7 +31,7 @@ export const CarouselComponent = ({ config }) => {
                                 loading='lazy' />
                             <div className='info'>
                                 <span>{item.carouselHeader}</span>
-                                <h1>{(((item.carouselSubText[0]).toString()).toUpperCase())+(item.carouselSubText).substring(1)}</h1>
+                                <h1>{(((item.carouselSubText[0]).toString()).toUpperCase()) + (item.carouselSubText).substring(1)}</h1>
                             </div>
                         </div>
                     ))

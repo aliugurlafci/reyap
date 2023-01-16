@@ -88,7 +88,7 @@ body, html {
   background-color: #fff !important;
 }
 
-.content .topContent{
+.content .topContent {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -179,9 +179,7 @@ body, html {
   align-items: center;
 }
 
-.menu-container .no-show,
-.menu-container .no-show:hover,
-.menu-container .no-show:focus {
+.menu-container .no-show, .ant-menu-submenu-popup {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;

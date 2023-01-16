@@ -62,14 +62,26 @@
     margin-top: 30px;
     min-width: 300px !important;
     flex: 1 !important;
-    margin-left: 10px;
 }
 
 .form-part3 {
     margin-top: 108px;
     min-width: 300px !important;
     flex: 1 !important;
-    margin-left: 10px;
+}
+
+@media screen and (min-width:0px) and (max-width:1020px) {
+    .form-part, .form-part2, .form-part3 {
+        max-width: 100% !important;
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (min-width:720px) and (max-width:1020px) {
+    .form-part2 {
+        max-width: 100% !important;
+        margin-top: 30px !important;
+    }
 }
 
 :where(.css-dev-only-do-not-override-9ntgx0).ant-menu-light .ant-menu-item-selected {
