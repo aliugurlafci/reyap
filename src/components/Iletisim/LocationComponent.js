@@ -17,15 +17,15 @@ export const LocationComponent = () => {
             <Row>
                 <div className='items'>
                     <div className='item'>
-                        <HomeOutlined style={{fontSize: 30, marginRight:20, color:'green'}} />
+                        <HomeOutlined style={{ fontSize: 30, marginRight: 20, color: 'green' }} />
                         <p>HASANPAŞA MAH. FATİH BULV. FATİH İŞ MERK. NO:5/2 SULTANBEYLİ/İSTANBUL</p>
                     </div>
                     <div className='item'>
-                        <PhoneOutlined style={{fontSize: 30, marginRight:20, color:'green'}} />
+                        <PhoneOutlined style={{ fontSize: 30, marginRight: 20, color: 'green' }} />
                         <p>+90 (530) 247 26 74</p>
                     </div>
                     <div className='item'>
-                        <MailOutlined style={{fontSize: 30, marginRight:20, color:'green'}} />
+                        <MailOutlined style={{ fontSize: 30, marginRight: 20, color: 'green' }} />
                         <p>satis@reyapgroup.com</p>
                     </div>
                 </div>

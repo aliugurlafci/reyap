@@ -82,6 +82,7 @@ export const ProductDetailsComponent = () => {
     const onFinishForm = async (values) => {
         setFetching(true);
         values["siparis_zamani"] = new Date().toLocaleString();
+        values["urun_kodu"] = product.productCode;
         const { data } = await axios.post("https://api.reyapgroup.com/api/send-order", JSON.stringify(values));
 
         if (data.status === 200) {

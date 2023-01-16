@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout } from 'antd';
+import { Layout, Row, Col, Collapse } from 'antd';
 import './Iletisim.css'
 import {
     FooterComponent,
@@ -17,15 +17,17 @@ export default function Iletisim() {
             <Layout className='content-layout'>
                 <MenuComponent />
                 <Content className='content'>
-                    <div className='topContent'>
-                        <MapComponent />
-                        <div className='subcontent'>
+                    <Row align="center" gutter={[24, 48]}>
+                        <Col xs={24} sm={24} md={24} lg={8}>
+                            <MapComponent />
+                        </Col>
+                        <Col
+                            className='margin-after-1000'
+                            xs={24} sm={24} md={12} lg={6}>
                             <LocationComponent />
                             <FormComponent />
-                        </div>
-                    </div>
-{/*                     <div className='subcontent'>
-                    </div> */}
+                        </Col>
+                    </Row>
                 </Content>
                 <FooterComponent />
             </Layout>
@@ -33,8 +35,13 @@ export default function Iletisim() {
     );
 }
 /**
- * Veri şeması
- * 
+ * Veri şeması xs={24} sm={24} md={18} lg={15}
+ *                  <div className='topContent'>
+                        <MapComponent />
+                        <div className='subcontent'>
+                            
+                        </div>
+                    </div>
  * "contact": {
         "central": {
             "adres": "example",
