@@ -134,6 +134,18 @@
     text-align: left;
 }
 
+@media screen and (max-width:459px) {
+    .work-details .item-container {
+        margin: 50px auto;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .header h3 {
+        margin-left: 4%;
+    }
+}
+
 .item-container span {
     font-size: 40px;
 }

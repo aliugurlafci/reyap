@@ -5,25 +5,23 @@ import i18n from '../../i18n';
 export const AboutComponent = ({ config }) => {
     return (
         <div className="about-container">
-            <Row wrap justify="center" style={{ marginBottom: 25, padding: 30 }} gutter={16} align="middle" >
-                <Row className="about-header-container">
-                    <span className='about-header'>{i18n.t('institutional')}</span>
-                    <Col xs={24} sm={24} md={10} lg={10}>
-                        <img src={config.image} alt="instituonal" className='about-image'
-                        />
-                    </Col>
-                    <Col xs={24} sm={24} md={10} lg={10}>
-                        <div className="boxMain">
-                            {
-                                config.details.map(item => (
-                                    <div className='text'>
-                                        {item}
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </Col>
-                </Row>
+            <span className='about-header'>{i18n.t('institutional')}</span>
+            <Row wrap gutter={16} align="middle" justify="center">
+                <Col>
+                    <img src={config.image} alt="instituonal" className='about-image'
+                    />
+                </Col>
+                <Col >
+                    <div className="boxMain">
+                        {
+                            config.details.map(item => (
+                                <div className='text'>
+                                    {item}
+                                </div>
+                            ))
+                        }
+                    </div>
+                </Col>
             </Row>
         </div>
     );

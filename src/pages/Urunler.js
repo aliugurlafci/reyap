@@ -16,7 +16,7 @@ export default function Urunler() {
     return (
         <Layout>
             <MenuComponent />
-            <Content className='content'>
+            <Content className='content' style={{ height: window.innerHeight }}>
                 <ProductComponent
                     categories={
                         language === 'tr' ? config.categories.TR : config.categories.EN
@@ -25,7 +25,7 @@ export default function Urunler() {
                         language === 'tr' ? config.productList.TR : config.productList.EN
                     } />
             </Content>
-            <Layout>
+            <Layout style={{ position: 'relative' }}>
                 <FooterComponent />
             </Layout>
         </Layout>

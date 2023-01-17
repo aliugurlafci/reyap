@@ -61,8 +61,13 @@
     padding: 50px 0 50px 0;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:700px) {
     .box-main {
         text-align: center;
+    }
+
+    .slogan-box {
+        max-width: 85%;
+        margin: 16px auto;
     }
 }

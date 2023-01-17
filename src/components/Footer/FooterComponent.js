@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Layout, Col, Row } from 'antd';
-import { Link } from 'react-router-dom';
 import './footer.css';
 import {
     FacebookOutlined,
@@ -18,21 +17,21 @@ export const FooterComponent = () => {
 
     return (
         <Footer className='footer'>
-            <div className='footer-top'>
-                <Row style={{ color: 'white' }} className='left-footer'>
-                    <Col style={{ marginTop: 5 }} className="poppins-regular">{i18n.t('phone')} : +90 (534) 424 44 23</Col>
-                    <Col style={{ marginTop: 5 }} className="poppins-regular">{i18n.t('mailaddress')} : satis@reyapgroup.com</Col>
-                </Row>
-                <Row style={{ color: 'white' }} className='right-footer' gutter={[0, 8]}>
-                    <a style={{color:'white'}} href="https://www.instagram.com/reyapgroup_/">
-                        <Col className='item'>@reyapgroup<InstagramOutlined style={{ fontSize: 30, marginLeft: 10 }} /></Col>
+            <Row style={{ color: 'white' }} className='footer-top' gutter={[0, 16]}>
+                <Col xs={24} sm={24} md={12} lg={8} className="footer-info">
+                    <span className="poppins-regular">{i18n.t('phone')} : +90 (534) 424 44 23</span>
+                    <span className="poppins-regular">{i18n.t('mailaddress')} : satis@reyapgroup.com</span>
+                </Col>
+                <Col xs={24} sm={24} md={12} lg={8} className="footer-social-links">
+                    <a style={{ color: 'white' }} href="https://www.instagram.com/reyapgroup_/">
+                        <span xs={24} sm={24} className='item'>@reyapgroup<InstagramOutlined style={{ fontSize: 30, marginLeft: 10 }} /></span>
                     </a>
-                    <a style={{color:'white'}} href='https://www.facebook.com/reyapgroup_/'>
-                        <Col className='item'>@reyapgroup<FacebookOutlined style={{ fontSize: 30, marginLeft: 10 }} /></Col>
+                    <a style={{ color: 'white' }} className="second-link" href='https://www.facebook.com/reyapgroup_/'>
+                        <span className='item'>@reyapgroup<FacebookOutlined style={{ fontSize: 30, marginLeft: 10 }} /></span>
                     </a>
-                </Row>
-            </div>
-            <Row style={{ color: 'white' }} className='center poppins-regular'>Copyright © 2022 Reyap Plastik</Row>
+                </Col>
+            </Row>
+            <Row style={{ color: 'white', marginTop: 32, fontStyle: 'italic' }} className='center poppins-regular'>Copyright © 2023 Reyap Plastik</Row>
         </Footer>
     );
 }

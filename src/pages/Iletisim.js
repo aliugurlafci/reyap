@@ -16,7 +16,7 @@ export default function Iletisim() {
         <Layout>
             <Layout className='content-layout'>
                 <MenuComponent />
-                <Content className='content'>
+                <Content className='content' style={{ height: window.innerHeight }}>
                     <Row align="center" gutter={[24, 48]}>
                         <Col xs={24} sm={24} md={24} lg={8}>
                             <MapComponent />

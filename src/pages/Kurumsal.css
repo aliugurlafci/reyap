@@ -1,14 +1,22 @@
 .about-container {
     width: 100%;
-    min-height: 710px;
-    margin-bottom: 50px;
+    padding-top: 60px;
     background-color: white;
 }
 
 .about-image {
+    max-width: 100%;
     width: 500px;
     height: 400px;
     margin-bottom: 50px;
+}
+
+@media screen and (max-width:960px) {
+    .about-image {
+        margin-top: 40px;
+        padding: 24px;
+        margin-bottom: -24px;
+    }
 }
 
 .about-main {
@@ -22,29 +30,18 @@
     flex-direction: column;
 }
 
-.boxMain .text{
+.boxMain .text {
     display: flex;
     font-family: poppins-regular;
     margin-top: 10px;
 }
 
-.about-container .about-header-container {
-    width: 80%;
-    height: 100%;
-    max-width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 100px;
-}
-
-.about-header-container .about-header {
-    width: 80%;
+.about-container .about-header {
     font-family: poppins-medium;
     font-size: 24px;
     text-transform: uppercase;
+    padding-left: 13vw;
 }
-
 
 .flex-row .about-menu {
     min-width: 15%;

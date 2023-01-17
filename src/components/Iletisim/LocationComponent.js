@@ -22,7 +22,7 @@ export const LocationComponent = () => {
                     </div>
                     <div className='item'>
                         <PhoneOutlined style={{ fontSize: 30, marginRight: 20, color: 'green' }} />
-                        <p>+90 (530) 247 26 74</p>
+                        <p>+90 (534) 424 44 23</p>
                     </div>
                     <div className='item'>
                         <MailOutlined style={{ fontSize: 30, marginRight: 20, color: 'green' }} />
