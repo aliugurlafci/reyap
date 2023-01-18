@@ -28,10 +28,12 @@
     display: flex;
     font-family: poppins-regular;
     flex-direction: column;
+    text-align: left;
 }
 
 .boxMain .text {
     display: flex;
+    max-width: 100%;
     font-family: poppins-regular;
     margin-top: 10px;
 }
@@ -40,7 +42,6 @@
     font-family: poppins-medium;
     font-size: 24px;
     text-transform: uppercase;
-    padding-left: 13vw;
 }
 
 .flex-row .about-menu {

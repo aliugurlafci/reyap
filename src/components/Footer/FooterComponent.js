@@ -16,7 +16,7 @@ export const FooterComponent = () => {
     }, [env]);
 
     return (
-        <Footer className='footer'>
+        <Footer className="footer">
             <Row style={{ color: 'white' }} className='footer-top' gutter={[0, 16]}>
                 <Col xs={24} sm={24} md={12} lg={8} className="footer-info">
                     <span className="poppins-regular">{i18n.t('phone')} : +90 (534) 424 44 23</span>

@@ -14,11 +14,11 @@ export default function ProductDetails() {
     const { state } = useLocation();
     return (
         <Layout>
-            <Layout className='content-layout'>
-                <MenuComponent />
-                <Content className='content'>
-                    <ProductDetailsComponent index={state} />
-                </Content>
+            <MenuComponent />
+            <Content className='content' style={{ paddingBottom: 250 }}>
+                <ProductDetailsComponent index={state} />
+            </Content>
+            <Layout className='bottom-fixed'>
                 <FooterComponent />
             </Layout>
         </Layout>

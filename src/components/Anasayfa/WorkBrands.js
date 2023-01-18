@@ -5,7 +5,7 @@ import { Carousel, Row, Col } from 'antd';
 export const WorkBrands = ({ config }) => {
     const carouselResize = () => {
         const leng = config.lenth;
-        return leng < 6 ? leng < 5 ? leng < 4 ? leng < 3 : 2 : 3 : 4
+        return leng < 4 ? leng < 3 ? leng < 2 ? 1 : 2 : 3 : 4
     }
     return (
         <Row

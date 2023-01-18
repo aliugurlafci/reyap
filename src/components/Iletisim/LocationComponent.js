@@ -7,7 +7,7 @@ import { HomeOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
 export const LocationComponent = () => {
     return (
         <div className='contact-location-main'>
-            <Row>
+            <Row align="middle">
                 <div className='items'>
                     <div className='item'>
                         <HomeOutlined style={{ fontSize: 30, marginRight: 20, color: 'green' }} />

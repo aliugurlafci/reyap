@@ -11,8 +11,8 @@ export const WorkDetails = ({ config }) => {
 
     return (
         <div className="work-details">
-            <Row className="work-details-row">
-                <Col>
+            <Row className="work-details-row" align="middle" justify='center'>
+                <Col xs={24} sm={24} md={12} lg={4} className="center">
                     <div className="item-container">
                         <RiseOutlined className="item-icon" />
                         <div className="item-content">
@@ -21,8 +21,8 @@ export const WorkDetails = ({ config }) => {
                         </div>
                     </div>
                 </Col>
-                <Col>
-                    <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
+                <Col xs={24} sm={24} md={12} lg={4} className="center">
+                    <div className="item-container" >
                         <AuditOutlined className="item-icon" />
                         <div className="item-content">
                             <span className="poppins-regular">+ 30</span>
@@ -30,8 +30,8 @@ export const WorkDetails = ({ config }) => {
                         </div>
                     </div>
                 </Col>
-                <Col>
-                    <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
+                <Col xs={24} sm={24} md={12} lg={4} className="center">
+                    <div className="item-container" >
                         <CommentOutlined className="item-icon" />
                         <div className="item-content">
                             <span className="poppins-regular">+ 5000</span>
@@ -39,8 +39,8 @@ export const WorkDetails = ({ config }) => {
                         </div>
                     </div>
                 </Col>
-                <Col>
-                    <div className="item-container" xs={24} sm={12} md={12} lg={6} span={6}>
+                <Col xs={24} sm={24} md={12} lg={4} className="center">
+                    <div className="item-container" >
                         <HourglassOutlined className="item-icon" />
                         <div className="item-content">
                             <span className="poppins-regular">+ 5000</span>

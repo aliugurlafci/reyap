@@ -156,7 +156,7 @@ export const ProductDetailsComponent = () => {
                         {
                             product.image.map(item => (
                                 <Image
-                                    key={item.key}
+                                    key={`product-${product.productCode}`}
                                     src={item.url}
                                     alt='iaag'
                                     decoding='async'

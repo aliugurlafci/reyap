@@ -17,7 +17,7 @@ export const InfoBox = ({ config }) => {
             </div>
             {
                 config.description.map(item => (
-                    <Col className="box-main" xs={24} sm={24} md={24} lg={24}>
+                    <Col className="box-main" xs={24} sm={24} md={24} lg={24} key={item}>
                         {item}
                     </Col>
                 ))

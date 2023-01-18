@@ -81,16 +81,6 @@ body, html {
   font-family: poppins-bold;
 }
 
-.content {
-  width: 100%;
-  background-color: #fff !important;
-}
-
-.content .topContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 :where(.css-dev-only-do-not-override-9ntgx0).ant-menu-horizontal {
   border-bottom: none !important;

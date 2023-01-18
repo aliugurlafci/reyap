@@ -15,24 +15,13 @@ export default function Kurumsal() {
     const language = useSelector(state => state.languageListener.language);
     return (
         <Layout>
-            <Layout className='content-layout'>
-                <MenuComponent />
-                <Content className='content'>
-                    <AboutComponent config={language === 'tr' ? config.TR : config.EN} />
-                </Content>
-                <Layout style={{ position: 'relative' }}>
-                    <FooterComponent />
-                </Layout>
+            <MenuComponent />
+            <Content className='content'>
+                <AboutComponent config={language === 'tr' ? config.TR : config.EN} />
+            </Content>
+            <Layout className='bottom-fixed'>
+                <FooterComponent />
             </Layout>
         </Layout>
     );
 }
-/**
- * Veri şeması
- * 
- * "instituonal": {
-        "image": "example",
-        "title": "example",
-        "details": "example"
-    },
- */
