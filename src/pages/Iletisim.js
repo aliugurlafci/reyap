@@ -23,7 +23,7 @@ export default function Iletisim() {
                         </Col>
                         <Col
                             className='margin-after-1000'
-                            xs={24} sm={24} md={12} lg={6}>
+                            xs={24} sm={24} md={12} lg={5}>
                             <LocationComponent />
                             <FormComponent />
                         </Col>
@@ -34,28 +34,3 @@ export default function Iletisim() {
         </Layout>
     );
 }
-/**
- * Veri şeması xs={24} sm={24} md={18} lg={15}
- *                  <div className='topContent'>
-                        <MapComponent />
-                        <div className='subcontent'>
-                            
-                        </div>
-                    </div>
- * "contact": {
-        "central": {
-            "adres": "example",
-            "tel": "example",
-            "fax": "example",
-            "email": "example"
-        },
-        "factory": {
-            "adres": "example",
-            "tel": "example"
-        },
-        "export": {
-            "name": "example",
-            "tel": "example"
-        }
-    },
- */

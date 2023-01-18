@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     Row,
     Col,
@@ -8,7 +8,8 @@ import {
     Carousel,
     Form,
     Input,
-    notification
+    notification,
+    InputNumber
 } from 'antd';
 import i18n from '../../i18n';
 import axios from 'axios';
@@ -22,6 +23,8 @@ export const ProductDetailsComponent = () => {
     const [form] = Form.useForm();
     const [product,] = useState(state.products[state.key - 1]);
     const [fetching, setFetching] = useState(false);
+    const [adet, setAdet] = useState(1);
+    const [tutar, setTutar] = useState(product.bulkDetails[0].value + " " + product.bulkDetails[0].currency);
 
     const detailsColumns = [
         {
@@ -64,7 +67,6 @@ export const ProductDetailsComponent = () => {
         });
         return newSoure;
     }
-
     const handleBulkDataSource = () => {
         let newSoure = [];
         product.bulkDetails.map(item => {
@@ -102,6 +104,38 @@ export const ProductDetailsComponent = () => {
             setFetching(false);
         }
     }
+    useEffect(() => {
+        if (adet > 0 && adet < 25) {
+            const price = product.bulkDetails[0];
+            return setTutar((parseFloat(price.value) * adet) + " " + price.currency);
+        }
+        if (adet > 24 && adet <= 100) {
+            const price = product.bulkDetails[0];
+            return setTutar((parseFloat(price.value) * adet) + " " + price.currency);
+        }
+        else if (adet > 100 && adet < 251) {
+            const price = product.bulkDetails[1];
+            return setTutar((parseFloat(price.value) * adet) + " " + price.currency);
+        }
+        else if (adet > 250 && adet < 501) {
+            const price = product.bulkDetails[2];
+            return setTutar((parseFloat(price.value) * adet) + " " + price.currency);
+        }
+        else if (adet > 500 && adet < 1001) {
+            const price = product.bulkDetails[3];
+            return setTutar((parseFloat(price.value) * adet) + " " + price.currency);
+        }
+        else if (adet > 1000 && adet < 5001) {
+            const price = product.bulkDetails[4];
+            return setTutar((parseFloat(price.value) * adet) + " " + price.currency);
+        }
+        else if (adet > 5001) {
+            return setTutar("Please contact us");
+        }
+        else {
+            return setTutar("");
+        }
+    }, [adet]);
     return (
         <div className="product-details">
             <Row justify="center" align="top" gutter={[16, 16]}>
@@ -114,9 +148,9 @@ export const ProductDetailsComponent = () => {
                         effect='scrollx'
                         lazyLoad='progressive'
                         swipe
-                        centerMode
-                        variableWidth
-                        style={{ maxWidth: '100%', maxHeight: 540 }}
+
+                        adaptiveHeight
+                        style={{ maxWidth: '100%' }}
                         className='product-details-carousel'
                         draggable>
                         {
@@ -127,7 +161,7 @@ export const ProductDetailsComponent = () => {
                                     alt='iaag'
                                     decoding='async'
                                     unselectable='on'
-                                    style={{ maxWidth: 500, maxHeight: 540 }}
+                                    style={{ minWidth: '100%', maxHeight: 540 }}
                                     loading='lazy' />
                             ))
                         }
@@ -149,7 +183,22 @@ export const ProductDetailsComponent = () => {
                         bordered
                         expandable
                         size='large'
-                    />
+                        style={{ marginBottom: 40 }} />
+                    <span className='poppins-medium' style={{ fontSize: 16 }}>Tutar Hesapla</span>
+                    <br />
+                    <InputNumber
+                        defaultValue={adet}
+                        controls={false}
+                        style={{ marginTop: 20 }}
+                        formatter={(value) => `${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                        parser={(value) => value.replace(/\$\s?|(,*)/g, '')}
+                        onChange={value => setAdet(value)} />
+                    {
+                        tutar !== "" ?
+                            <span className='poppins-regular' style={{ marginLeft: 20 }}>
+                                Toplam Tutar <span className='poppins-bold' style={{ color: '#143d2b', marginLeft: 12 }}>{tutar}</span>
+                            </span> : <></>
+                    }
                 </Col>
             </Row>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50 }}>

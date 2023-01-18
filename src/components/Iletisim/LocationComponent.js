@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Row,
-    Form,
-    Input,
-    Button,
-    Col
 } from 'antd';
-import i18n from '../../i18n';
 import { HomeOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
-
-const { TextArea } = Input;
 
 export const LocationComponent = () => {
     return (

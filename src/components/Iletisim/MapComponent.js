@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Row,
-    Form,
-    Input,
-    Button,
     Col
 } from 'antd';
 import i18n from '../../i18n';
@@ -21,7 +18,7 @@ export const MapComponent = () => {
                                 height="100%"
                                 width="100%"
                                 className='contact-map'
-                                style={{ border: 1, maxWidth: 500 }}
+                                style={{ border: 1 }}
                                 loading="lazy"
                                 title='reyap-map'
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
