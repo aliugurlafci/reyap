@@ -11,7 +11,8 @@ export const WorkBrands = ({ config }) => {
         <Row
             className='buyer-comments-section'
             justify="center"
-            align="middle">
+            align="middle"
+            gutter={[16, 16]}>
             <Col xs={24} sm={22} md={20} lg={20}>
                 <div className='header'>
                     <h3>Satış Noktalarımız</h3>
@@ -28,6 +29,7 @@ export const WorkBrands = ({ config }) => {
                     swipeToSlide
                     adaptiveHeight
                     centerMode
+                    centerPadding='50px'
                     variableWidth={false}
                     className='comment-carousel center'
                     speed={2400}>

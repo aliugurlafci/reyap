@@ -148,7 +148,6 @@ export const ProductDetailsComponent = () => {
                         effect='scrollx'
                         lazyLoad='progressive'
                         swipe
-
                         adaptiveHeight
                         style={{ maxWidth: '100%' }}
                         className='product-details-carousel'

@@ -21,7 +21,7 @@ function Anasayfa() {
     return (
         <Layout>
             <MenuComponent />
-            <Content style={{ paddingBottom: 200, backgroundColor: '#fff' }}>
+            <Content style={{ paddingBottom: 100, backgroundColor: '#fff' }}>
                 <CarouselComponent config={
                     language === 'tr' ? config.carousel.TR : config.carousel.EN
                 } />
