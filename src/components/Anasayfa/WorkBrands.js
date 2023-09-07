@@ -52,17 +52,3 @@ export const WorkBrands = ({ config }) => {
         </Row>
     );
 }
-
-/**
- * xs={22} sm={11} md={8} lg={4}
- * <div className='comment-content'>
-                            <div className='image-side'>
-                                <img
-                                    src={Lacoste}
-                                    alt='test'
-                                />
-                            </div>
-                            <div className='comment-side'></div>
-                            <div className='footer-side'></div>
-                        </div>
- */
